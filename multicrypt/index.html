@@ -1,0 +1,223 @@
+<html>
+    <head>
+        <link rel="icon" href="lock.jpg">
+        <title>Multicrypt | AbhayTr</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            
+            *
+            {
+                -webkit-animation: fadein 2s;
+                -moz-animation: fadein 2s;
+                -ms-animation: fadein 2s;
+                -o-animation: fadein 2s;
+                animation: fadein 2s;
+            }
+
+            @keyframes fadein 
+            {
+                from 
+                { 
+                    opacity: 0; 
+                }
+                to
+                {
+                    opacity: 1; 
+                }
+            }
+            
+            @-moz-keyframes fadein
+            {
+                from 
+                { 
+                    opacity: 0; 
+                }
+                to
+                {
+                    opacity: 1; 
+                }
+            }
+            
+            @-webkit-keyframes fadein
+            {
+                from 
+                { 
+                    opacity: 0; 
+                }
+                to
+                {
+                    opacity: 1; 
+                }
+            }
+            
+            @-ms-keyframes fadein
+            {
+                from 
+                { 
+                    opacity: 0; 
+                }
+                to
+                {
+                    opacity: 1; 
+                }
+            }
+            
+            @-o-keyframes fadein 
+            {
+                from 
+                { 
+                    opacity: 0; 
+                }
+                to
+                {
+                    opacity: 1; 
+                }
+            }
+      
+            body
+            {
+                color: white;
+                text-align: center;
+                font-family: "Lucida Console", Courier, monospace;
+            }
+            
+            p
+            {
+                font-size: 20px;
+            }
+            
+            textarea
+            {
+                width: 55%;
+                height: 25%;
+            }
+            
+            .loader
+            {
+                font-size: 30px;
+                font-weight: bold;
+                z-index: 9999;
+                animation: spin 2s linear infinite;
+                margin: auto;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                right: 0;
+            }
+
+            .overlay
+            {
+                opacity:0.9;
+                background-color: black;
+                position:fixed;
+                width:100%;
+                height:100%;
+                top:0px;
+                left:0px;
+                z-index:1000;
+            }
+
+            button
+            {
+                text-align: center;
+                margin: 0;
+                font-weight: bold;
+                align: center;
+                padding: 10px;
+                color: white;
+                font-size: 20px;
+                background-color: #2f353b;
+                border-radius: 8px;
+                border: 0px;
+            }
+
+
+        </style>
+        <script src="/projects/multicrypt.js"></script>
+        <script src="/projects/beauty.js"></script>
+        <script src="/assets/js/banner_check.js"></script>
+        <script src="/assets/js/jquery.min.js"></script>
+    </head>
+    <body>
+        <br>
+        <h1>Multicrypt Web Demo</h1>
+        <p>This web page is a demonstration for the multicrypt algorithm made by Abhay Tripathi.</p>
+        <br>
+        <button onclick="use_sample_keys()">Use Sample Key Pair (Sample Public and Private Keys)</button>
+        <br><br>
+        <p><b>Enter Public Key with which you want to encrypt the message:</b></p>
+        <br>
+        <textarea id="public"></textarea>
+        <p><b>Enter Private Key with which you want to decrypt the message:</b></p>
+        <br>
+        <textarea id="private"></textarea>
+        <p><b>Enter message to encrypt or decrypt:</b></p>
+        <br>
+        <textarea id="message"></textarea>
+        <br>
+        <p><b>Result:</b></p>
+        <br>
+        <textarea id="result">Result of encryption/decryption will be shown here</textarea>
+        <br><br><br>
+        <button onclick="encrypt()">Encrypt Message</button>
+        &nbsp;
+        <button onclick="decrypt()">Decrypt Message</button>
+        <br><br>
+        <script>
+        
+            const sample_public_key = "bgfdiihgdffhhidcgeachccecadjebcgbhhgjfhdggiacjhhfhhbeedjhabdeebbgjajiciegiajdhhjceebehcgceegibjdcjdgcjeichehgbeihbdfbaihfjbbcjbfdfhbjccihjfgfhecfhhfjiddecbdcfhdibchhjcggaaibefahaedfhfccdidibcaegicjiejdgecdgjejbibiaccifihggbabhgighdfidbbcaecaighbdahchiiaffigcihgcbigdaighfjdfgddeigbdhdbejbgfehfhdjdfbfihibfebdbhajcchgajddbigcicabjaebdiedcgajdbeajcdfcjcficcdcifjecgejjhijgbhabeddaccciaghcgdejdhbafhjdfghbdijcfhciedhcaidfhdgaggdecehacaahgjghiiaadcjihddhbebcahebbagejggeagchbghjcdihjjiijadfihdhchjbhdbcfdbeffijeegihaeefjecgbfbjadegfghjefbfcgdgiefcbafddcceieiihbfhbgbgceghcggiiiahjjjfcfebfidjjccgbfcgjedhfhbjifdeddcbeifcjgXc";
+            const sample_private_key = "ahdcccbdiggibfbiafgehhijbjicfhbdheiacghihebgecibdehhcfichgdigjaeacdjfbfchfjfiibjbcfhchiaegjebhjbhfihbjcieijehagcbafdadfegcdhbjagfdedfhicbjdeabcegibdjfbifhhbiabcbhbehfiahjgiejdabajcabdbbcbiidhggaieciffihcefdgjjaiebgeeigiiahadaiaihefdfbhaedcedfebafabbeiidddfdicbdhhfdidfebdjcaafcjfdhcbbhcceaggbdefjcjhdfeieajaeifeegfijgahfijafhdcbejiahehbibjgdeeedhhdghdicffjfiggedafahgbfcbdgdcegfhijdcfiadihddacicfcahcbfbfebfghfahagedfieecgdffhihbjdbeideafgggfhhfbahjjghfebfgbagfeehggjbddiafbjhfgbhhdiaagcidfbiahffefggfeejggdbhcgfgfdeabeegcafcdjjfebghjdegfaiedbcbfihgcbbdegejeichheacfeacghjcidgaheegjjaihgcegdgbbfjdaheebjaghjfaadehhhiaXbgfdiihgdffhhidcgeachccecadjebcgbhhgjfhdggiacjhhfhhbeedjhabdeebbgjajiciegiajdhhjceebehcgceegibjdcjdgcjeichehgbeihbdfbaihfjbbcjbfdfhbjccihjfgfhecfhhfjiddecbdcfhdibchhjcggaaibefahaedfhfccdidibcaegicjiejdgecdgjejbibiaccifihggbabhgighdfidbbcaecaighbdahchiiaffigcihgcbigdaighfjdfgddeigbdhdbejbgfehfhdjdfbfihibfebdbhajcchgajddbigcicabjaebdiedcgajdbeajcdfcjcficcdcifjecgejjhijgbhabeddaccciaghcgdejdhbafhjdfghbdijcfhciedhcaidfhdgaggdecehacaahgjghiiaadcjihddhbebcahebbagejggeagchbghjcdihjjiijadfihdhchjbhdbcfdbeffijeegihaeefjecgbfbjadegfghjefbfcgdgiefcbafddcceieiihbfhbgbgceghcggiiiahjjjfcfebfidjjccgbfcgjedhfhbjifdeddcbeifcjg";
+        
+            Beauty
+            (
+                {
+                    mode: "dark"
+                },
+                function(rgb_color)
+                {
+                    document.body.style.backgroundColor = "rgb(" + rgb_color[0] + ", " + rgb_color[1] + ", " + rgb_color[2] + ")";
+                }
+            );
+            
+            var e2e = new End2End
+            (
+                {
+                    public_key: "NOT REQUIRED",
+                    private_key: "NOT REQUIRED",
+                    save: false
+                }
+            );
+
+            function encrypt()
+            {
+                try
+                {
+                    document.getElementById("result").value = e2e.encrypt(document.getElementById("message").value, document.getElementById("public").value);
+                }
+                catch (e)
+                {
+                    document.getElementById("result").value = "Something went wrong. Kindly check your keys and message and try again."
+                }
+            }
+
+            function decrypt()
+            {
+                try
+                {
+                    document.getElementById("result").value = e2e.decrypt(document.getElementById("message").value, document.getElementById("private").value);
+                }
+                catch (e)
+                {
+                    document.getElementById("result").value = "Something went wrong. Kindly check your keys and message and try again."
+                }
+            }
+            
+            function use_sample_keys()
+            {
+                document.getElementById("public").value = sample_public_key;
+                document.getElementById("private").value = sample_private_key;
+            }
+
+        </script>
+    </body>
+</html>

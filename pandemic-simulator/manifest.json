@@ -1,0 +1,16 @@
+{
+  "name": "Pandemic Simulator",
+  "short_name": "Pandemic Simulator",
+  "start_url": "index.html",
+  "display": "fullscreen",
+  "background_color": "#1D1F2E",
+  "theme_color": "#1D1F2E", 
+  "orientation": "portrait-primary",
+  "icons": [ 
+    {
+      "src": "assets/images/germlogo.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}

@@ -1,0 +1,449 @@
+<html>
+  <head>
+    <link rel="icon" href="assets/images/atlogo.jpeg">
+    <title>Abhay Tripathi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <script src="/projects/beauty.js"></script>
+    <script src="/assets/js/banner_check.js"></script>
+    <style>
+      
+      *
+      {
+        box-sizing: border-box;
+      }
+
+      @keyframes fadein 
+      {
+        from 
+        { 
+          opacity: 0; 
+        }
+        to
+        {
+          opacity: 1; 
+        }
+      }
+
+      @-moz-keyframes fadein
+      {
+        from 
+        { 
+          opacity: 0; 
+        }
+        to
+        {
+          opacity: 1; 
+        }
+      }
+
+      @-webkit-keyframes fadein
+      {
+        from 
+        { 
+          opacity: 0; 
+        }
+        to
+        {
+          opacity: 1; 
+        }
+      }
+
+      @-ms-keyframes fadein
+      {
+        from 
+        { 
+          opacity: 0; 
+        }
+        to
+        {
+          opacity: 1; 
+        }
+      }
+
+      @-o-keyframes fadein 
+      {
+        from 
+        { 
+          opacity: 0; 
+        }
+        to
+        {
+          opacity: 1; 
+        }
+      }
+    
+      a:link 
+      {
+        color: white;
+        background-color: transparent;
+        text-decoration: none;
+      }
+
+      a:visited 
+      {
+        color: white;
+        background-color: transparent;
+        text-decoration: none;
+      }
+
+      a:hover 
+      {
+        color: #FFFFBF;
+        background-color: transparent;
+        text-decoration: underline;
+      }
+
+      body 
+      {
+        -webkit-animation: fadein 0s;
+        -moz-animation: fadein 0s;
+        -ms-animation: fadein 0s;
+        -o-animation: fadein 0s;
+        animation: fadein 0s;
+        font-family: "Lucida Console", Courier, monospace;
+        padding: 20px;
+        color: white;
+        background: url("assets/images/universe.jpg");
+        background-repeat: no-repeat;
+        background-size:cover;
+      }
+
+      .header 
+      {
+        -webkit-animation: fadein 2s;
+        -moz-animation: fadein 2s;
+        -ms-animation: fadein 2s;
+        -o-animation: fadein 2s;
+        animation: fadein 2s;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 30px;
+        padding-top: 30px;
+        margin-bottom: 0px;
+        color: lightgoldenrodyellow;
+        font-size: 55px;
+        font-weight: bold;
+        text-align: center;
+        text-shadow: 5px 5px 5px black, 0 0 55px orange, 0 0 55px red;
+        border-radius: 8px;
+        border: 0px;
+      }
+      
+      .header span
+      {
+        margin-top: 0px;
+        padding-top: 0px;
+        margin-bottom: 30px;
+        color: lightgoldenrodyellow;
+        font-size: 28px;
+        font-weight: bold;
+      }
+      
+      .footer 
+      {
+        font-family: arial;
+        padding-bottom: 5px;
+        padding-top: 30px;
+        margin-top: 25px;
+        margin-bottom: 0px;
+        color: white;
+        font-size: 21px;
+        font-weight: bold;
+        text-align: center;
+        text-shadow: 5px 5px 5px black, 0 0 55px orange, 0 0 55px red;
+      }
+      
+      .header_br
+      {
+        font-size: 6px;
+        padding: 0px;
+        margin: 0px;
+      }
+
+      .leftcolumn 
+      {   
+        -webkit-animation: fadein 3s;
+        -moz-animation: fadein 3s;
+        -ms-animation: fadein 3s;
+        -o-animation: fadein 3s;
+        animation: fadein 3s;
+        float: left;
+        width: 75%;
+      }
+
+      .rightcolumn 
+      {
+        -webkit-animation: fadein 5s;
+        -moz-animation: fadein 5s;
+        -ms-animation: fadein 5s;
+        -o-animation: fadein 5s;
+        animation: fadein 5s;
+        float: left;
+        width: 25%;
+        padding-right: 20px;
+      }
+
+      .fakeimg 
+      {
+        background-color: #aaa;
+        width: 100%;
+        padding: 20px;
+      }
+
+      .card 
+      {
+        background-color: #FF6347;
+        border-radius: 8px;
+        border: 0px;
+        padding: 20px;
+        margin-top: 15px;
+      }
+      
+      .card_aboutme 
+      {
+        -webkit-animation: fadein 4s;
+        -moz-animation: fadein 4s;
+        -ms-animation: fadein 4s;
+        -o-animation: fadein 4s;
+        animation: fadein 4s;
+        background-color: #146780;
+        border-radius: 8px;
+        border: 0px;
+        padding: 20px;
+        margin-top: 15px;
+      }
+      
+      .card_projects 
+      {
+        -webkit-animation: fadein 6s;
+        -moz-animation: fadein 6s;
+        -ms-animation: fadein 6s;
+        -o-animation: fadein 6s;
+        animation: fadein 6s;
+        background-color: #146780;
+        border-radius: 8px;
+        border: 0px;
+        padding: 5px;
+        margin-top: 15px;
+      }
+      
+      .card_followme 
+      {
+        -webkit-animation: fadein 8s;
+        -moz-animation: fadein 8s;
+        -ms-animation: fadein 8s;
+        -o-animation: fadein 8s;
+        animation: fadein 8s;
+        background-color: #FF8C00;
+        border-radius: 8px;
+        border: 0px;
+        padding-left: 15px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin-top: 15px;
+      }
+
+      .row:after 
+      {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      @media screen and (max-width: 800px) 
+      {
+        .leftcolumn, .rightcolumn 
+        {   
+          width: 100%;
+          padding: 0;
+        }
+      }
+      
+      .profile
+      {
+        margin-right: 0px;
+        width: 85%;
+        height: 40%;
+      }
+      
+      #header_div
+      {
+         position: relative;
+      }
+    
+    </style>
+  </head>
+  <body>
+    <div id="header_div" class="header">
+      <p>
+        ABHAY TRIPATHI
+        <br class="header_br">
+        <span><i>A passionate learner</i></span>
+      </p>
+    </div>
+
+    <div class="rightcolumn">
+      <div class="card_aboutme">
+        <h2>About Me</h2>
+        <img src="assets/images/profile.png" class="profile">
+        <p>
+          
+          I am a class XII student (AY 2020-21) who is a tech enthusiast and loves making apps to solve real
+          world day-to-day problems as an hobby.<br><br>
+          Currently, I make apps and games with languages:<br><br>
+          <b>Frontend:</b>
+               <ul>
+                 <li>Java</li>
+                 <li>Android Java</li>
+                 <li>Web Technologies (HTML, CSS and JavaScript)</li>
+                 <li>Graphical Python Modules (tkinter, pygame, etc.)</li>
+               </ul>
+          <b>Backend:</b>
+               <ul>
+                 <li>Python</li>
+                 <li>PHP</li>
+                 <li>NodeJS (rarely)</li>
+               </ul>
+          <b>Database:</b>
+               <ul>
+                 <li>MySQL</li>
+                 <li>NoSQL (rarely)</li>
+               </ul>
+          One can go through my projects which are listed on this page (More on my Github Page).<br><br>
+          One can contact me through the contact details listed below.<br><br>
+          Have a nice day!
+            
+        </p>
+      </div>
+    
+      <div class="card_followme">
+        <h3>Contact/Follow Me</h3>
+        <p><a href="https://twitter.com/abhaytriipathi" class="fa fa-twitter fa-lg">&nbsp;@abhaytriipathi</a></p>
+        <p><a href="https://github.com/AbhayTr" class="fa fa-github fa-lg">&nbsp;AbhayTr</a></p>
+        <p><a href="mailto:abhay.triipathi@gmail.com" class="fa fa-envelope fa-lg">&nbsp;E-Mail Me</a></p>
+        <p><a href="tel: +91 8800958568" class="fa fa-phone fa-lg">&nbsp;+91-8800958568</a></p>
+        <p><a href="https://t.me/abhayt" class="fa fa-telegram fa-lg">&nbsp;AbhayT</a></p>
+        <p><a href="https://wa.me/918800958568" class="fa fa-whatsapp fa-lg">&nbsp;+91-8800958568</a></p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="leftcolumn">
+        
+        <div class="card_projects">
+          <h3><center>Some of my projects (All can be viewed at my github page)</center></h3>
+        </div>
+        
+        <a href="digifriend">  
+          <div class="card">
+            <h2>DigiFriend</h2>
+            <p>
+          
+              A virtual friend app that makes your phone capable of functioning as modern day smart devices
+              (Amazon Alexa, Google Home, etc.).<br>Click here to know more and get the app.
+          
+            </p>
+          </div>
+        </a>
+        
+        <div class="card">
+          <h2>Beauty</h2>
+          <p>
+            Module for beautifully varying RGB colour sets which can be used for setting colours anywhere (Demo can be seen above in my name)
+            <br><br>
+            Module available in languages:
+            <ul>
+              <li><a href="https://github.com/AbhayTr/JBeauty"><b>Java (JBeauty)</b></a></li>
+              <li><a href="https://pypi.org/project/pybeauty"><b>Python (PyBeauty)</b></a></li>
+              <li><a href="https://github.com/AbhayTr/BeautyJS"><b>JS (BeautyJS)</b></a></li>
+            </ul>
+          </p>
+        </div>
+        
+        <div class="card">
+          <h2><a href="/multicrypt">Multicrypt</a></h2>
+          <p>
+            Module for secure End-2-End encryption using the Multicrypt algorithm made by me.<br>
+            <a href="/multicrypt">Click here for online demonstration of the multicrypt encryption system.</a>
+            <br><br>
+            Module available in languages:
+            <ul>
+              <li><a href="https://github.com/AbhayTr/JMulticrypt"><b>Java (JMulticrypt)</b></a></li>
+              <li><a href="https://pypi.org/project/pymulticrypt"><b>Python (PyMulticrypt)</b></a></li>
+              <li><a href="https://github.com/AbhayTr/MulticryptJS"><b>JS (MulticryptJS)</b></a></li>
+            </ul>
+          </p>
+        </div>
+        
+        <a href="https://pypi.org/project/pyfractals">  
+          <div class="card">
+            <h2>PyFractals</h2>
+            <p>
+          
+              A python module which visualizes the beautiful yet complex Mandelbrot Fractals design.
+          
+            </p>
+          </div>
+        </a>
+        
+        <a href="https://pypi.org/project/consolebar">  
+          <div class="card">
+            <h2>ConsoleBar</h2>
+            <p>
+          
+              A python module which makes stunning progress bars for loops, iterables etc. in console.
+          
+            </p>
+          </div>
+        </a>
+        
+        <a href="pandemic-simulator">  
+          <div class="card">
+            <h2>Pandemic Simulator</h2>
+            <p>
+          
+              A game in which the player has to stop a microbe from becoming a pandemic. Play now!
+          
+            </p>
+          </div>
+        </a>
+        
+        <a href="https://queuescan.com">  
+          <div class="card">
+            <h2>QueueScan</h2>
+            <p>
+          
+              An app through which virtual queues can be started anywhere with any QR code. Completely anonymous
+              queues with no registration/KYC. Just open the app and start/join a queue via QR code anywhere
+              anytime!
+          
+            </p>
+          </div>
+        </a>
+        
+        <div class="card_projects">
+          <h3><center>For more projects<br><br class="header_br">go to <a href="https://github.com/AbhayTr" class="fa fa-github fa-lg">&nbsp;AbhayTr</a></center></h3>
+        </div>
+        
+      </div>
+    </div>
+    <p class="footer">
+      &copy; 2021 Abhay Tripathi
+    </p>
+    <script>
+        
+      Beauty
+      (
+        {
+          mode: "dark"
+        },
+        function(rgb_color)
+        {
+          document.getElementById("header_div").style.backgroundColor = "rgb(" + rgb_color[0] + ", " + rgb_color[1] + ", " + rgb_color[2] + ")";
+        }
+      );
+      
+    </script>
+  </body>
+</html>

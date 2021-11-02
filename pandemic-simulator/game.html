@@ -1,0 +1,74 @@
+<html>
+  <head>
+    <link rel="icon" href="assets/images/germlogo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#1D1F2E">
+    <meta name="apple-mobile-web-app-status-bar" content="#1D1F2E">
+    <title>Pandemic Simulator by AbhayT</title>
+    <style>
+      
+      .button
+      {
+        background-color: green;
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 0px 0px;
+        outline: none;
+        font-family: "Lucida Console", Courier, monospace;
+        cursor: pointer;
+      }
+
+      .button1
+      {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        background-color: tomato;
+        height: 6%;
+        font-family: "Lucida Console", Courier, monospace;
+      }
+
+      .h1
+      {
+        color: white;
+        margin-top: 0px;
+        font-family: "Lucida Console", Courier, monospace;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        background-color: blue;
+      }
+
+      .h4 
+      {
+        color: white;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        margin-bottom: 0px;
+      }
+
+      .h3
+      {
+        color: white;
+        margin-top: 0px;
+        font-family: "Lucida Console", Courier, monospace;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        background-color: blue;
+      }
+      
+    </style>
+    <script src="/assets/js/banner_check.js"></script>
+    <script src="assets/js/game.js"></script>
+  </head>
+  <body onload="createButton();" style="background: url('/assets/images/universe.jpg');">
+    <button class="button button1" onclick="re()" id="start"><b>RESTART</b></button>
+    <h3 class="h1" id="stat" style="float: left; width: 50%;">Fatilities:<br>0</h3>
+    <h3 class="h3" id="statx" style="float: right; width: 50%;" align="right">Infected:<br>0</h3>
+    <h4 class="h4">&copy;Abhay Tripathi</h4>
+  </body>
+</html>
