@@ -103,7 +103,6 @@
         font-family: "Lucida Console", Courier, monospace;
         padding: 20px;
         color: white;
-        background: url("assets/images/universe.jpg");
         background-repeat: no-repeat;
         background-size:cover;
       }
@@ -125,6 +124,7 @@
         font-weight: bold;
         text-align: center;
         text-shadow: 5px 5px 5px black, 0 0 55px orange, 0 0 55px red;
+        background: url("assets/images/universe.jpg");
         border-radius: 8px;
         border: 0px;
       }
@@ -357,7 +357,7 @@
         <div class="card">
           <h2>Beauty</h2>
           <p>
-            Module for beautifully varying RGB colour sets which can be used for setting colours anywhere (Demo can be seen above in my name)
+            Module for beautifully varying RGB colour sets which can be used for setting colours anywhere.<br>(Demo can be seen in the background of this page)
             <br><br>
             Module available in languages:
             <ul>
@@ -447,7 +447,7 @@
         },
         function(rgb_color)
         {
-          document.getElementById("header_div").style.backgroundColor = "rgb(" + rgb_color[0] + ", " + rgb_color[1] + ", " + rgb_color[2] + ")";
+          document.body.style.backgroundColor = "rgb(" + rgb_color[0] + ", " + rgb_color[1] + ", " + rgb_color[2] + ")";
         }
       );
       
