@@ -4,7 +4,7 @@
     <title>Abhay Tripathi</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-    <script src="/projects/beauty.js"></script>
+    <script src="projects/beauty.js"></script>
     <style>
       
       *
@@ -103,6 +103,7 @@
         font-family: "Lucida Console", Courier, monospace;
         padding: 20px;
         color: white;
+        background-image: url("assets/images/universe.jpg");
         background-repeat: no-repeat;
         background-size:cover;
       }
@@ -124,7 +125,7 @@
         font-weight: bold;
         text-align: center;
         text-shadow: 5px 5px 5px black, 0 0 55px orange, 0 0 55px red;
-        background: url("assets/images/universe.jpg");
+        background: url("assets/images/circuit_dark.jpg");
         border-radius: 8px;
         border: 0px;
       }
@@ -355,9 +356,9 @@
         </a>
         
         <div class="card">
-          <h2>Beauty</h2>
+          <h2 id="beauty_demo">Beauty</h2>
           <p>
-            Module for beautifully varying RGB colour sets which can be used for setting colours anywhere.<br>(Demo can be seen in the background of this page)
+            Module for beautifully varying RGB colour sets which can be used for setting colours anywhere.<br>(Demo can be seen in the title "Beauty" of this section)
             <br><br>
             Module available in languages:
             <ul>
@@ -443,11 +444,11 @@
       Beauty
       (
         {
-          mode: "dark"
+          mode: "light"
         },
         function(rgb_color)
         {
-          document.body.style.backgroundColor = "rgb(" + rgb_color[0] + ", " + rgb_color[1] + ", " + rgb_color[2] + ")";
+          document.getElementById("beauty_demo").style.color = "rgb(" + rgb_color[0] + ", " + rgb_color[1] + ", " + rgb_color[2] + ")";
         }
       );
       
