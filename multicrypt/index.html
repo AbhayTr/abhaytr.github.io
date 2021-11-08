@@ -3,6 +3,7 @@
         <link rel="icon" href="lock.jpg">
         <title>Multicrypt | AbhayTr</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/assets/css/loader.css">
         <style>
             
             *
@@ -91,31 +92,6 @@
                 width: 55%;
                 height: 25%;
             }
-            
-            .loader
-            {
-                font-size: 30px;
-                font-weight: bold;
-                z-index: 9999;
-                animation: spin 2s linear infinite;
-                margin: auto;
-                position: absolute;
-                top: 50%;
-                left: 0;
-                right: 0;
-            }
-
-            .overlay
-            {
-                opacity:0.9;
-                background-color: black;
-                position:fixed;
-                width:100%;
-                height:100%;
-                top:0px;
-                left:0px;
-                z-index:1000;
-            }
 
             button
             {
@@ -137,7 +113,36 @@
         <script src="/projects/beauty.js"></script>
         <script src="/assets/js/jquery.min.js"></script>
     </head>
-    <body>
+    <body onload="stopLoader()">
+        <script>
+
+            function startLoader()
+            {
+                var loader = document.createElement("div");
+                loader.setAttribute("class", "loader");
+                loader.setAttribute("id", "loadr");
+                document.body.appendChild(loader);
+                var loaderb = document.createElement("div");
+                loaderb.setAttribute("class", "overlay");
+                loaderb.setAttribute("id", "loadrb");
+                document.body.appendChild(loaderb);
+            }
+      
+            function stopLoader()
+            {
+                try
+                {
+                    var element = document.getElementById("loadr");
+                    element.parentNode.removeChild(element);
+                    var elementb = document.getElementById("loadrb");
+                    elementb.parentNode.removeChild(elementb);
+                }
+                catch (e){}
+            }
+      
+            startLoader();
+      
+        </script>
         <br>
         <h1>Multicrypt Web Demo</h1>
         <p>This web page is a demonstration for the multicrypt algorithm made by Abhay Tripathi.</p>

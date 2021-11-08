@@ -3,6 +3,7 @@
         <title>Home | DigiFriend</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" href="assets/images/logo.png">
+        <link rel="stylesheet" href="/assets/css/loader.css">
         <style>
         
             *
@@ -193,7 +194,36 @@
             
         </style>
     </head>
-    <body>
+    <body onload="stopLoader()">
+        <script>
+
+            function startLoader()
+            {
+                var loader = document.createElement("div");
+                loader.setAttribute("class", "loader");
+                loader.setAttribute("id", "loadr");
+                document.body.appendChild(loader);
+                var loaderb = document.createElement("div");
+                loaderb.setAttribute("class", "overlay");
+                loaderb.setAttribute("id", "loadrb");
+                document.body.appendChild(loaderb);
+            }
+      
+            function stopLoader()
+            {
+                try
+                {
+                    var element = document.getElementById("loadr");
+                    element.parentNode.removeChild(element);
+                    var elementb = document.getElementById("loadrb");
+                    elementb.parentNode.removeChild(elementb);
+                }
+                catch (e){}
+            }
+      
+            startLoader();
+      
+        </script>
         <p style="margin-top: 40px; display: block; font-weight: bold;">Welcome! Please meet</p>
         <span class="heading">
             <img style="display: inline-flex; margin-right: 5px;" src="assets/images/logo.png" width="80px" height="80px">
