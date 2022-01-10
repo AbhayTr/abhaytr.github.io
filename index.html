@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/loader.css">
     <script src="projects/beauty.js"></script>
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="assets/js/a076d05399.js"></script>
     <style>
       
       *
@@ -126,8 +126,7 @@
         font-size: 55px;
         font-weight: bold;
         text-align: center;
-        text-shadow: 5px 5px 5px black, 0 0 55px orange, 0 0 55px red;
-        background: url("assets/images/circuit_dark.jpg");
+        /*background: url("assets/images/circuit_dark.jpg");*/
         border-radius: 8px;
         border: 0px;
       }
@@ -153,7 +152,6 @@
         font-size: 21px;
         font-weight: bold;
         text-align: center;
-        text-shadow: 5px 5px 5px black, 0 0 55px orange, 0 0 55px red;
       }
       
       .header_br
@@ -420,7 +418,7 @@
         <div class="card">
           <h2 id="beauty_demo">Beauty</h2>
           <p>
-            Module for beautifully varying RGB colour sets which can be used for setting colours anywhere.<br>(Demo can be seen in the title "Beauty" of this section)
+            Module for beautifully varying RGB colour sets which can be used for setting colours anywhere.<br>(Demo can be seen in the background of my name present above)
             <br><br>
             Module available in languages:
             <ul>
@@ -506,11 +504,11 @@
       Beauty
       (
         {
-          mode: "light"
+          mode: "dark"
         },
         function(rgb_color)
         {
-          document.getElementById("beauty_demo").style.color = "rgb(" + rgb_color[0] + ", " + rgb_color[1] + ", " + rgb_color[2] + ")";
+          document.getElementById("header_div").style.backgroundColor = "rgb(" + rgb_color[0] + ", " + rgb_color[1] + ", " + rgb_color[2] + ")";
         }
       );
       
