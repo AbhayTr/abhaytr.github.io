@@ -1,681 +1,750 @@
+<!DOCTYPE html>
 <html>
-  <head>
-    <link rel="icon" href="assets/images/atlogo.jpeg">
-    <title>Abhay Tripathi</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/loader.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-    <script src="projects/beauty.js"></script>
-    <script src="assets/js/a076d05399.js"></script>
-    <style>
-      
-      *
-      {
-        box-sizing: border-box;
-      }
+    <head>
+        <link rel="icon" href="assets/images/atlogo.jpeg">
+        <title>Abhay Tripathi</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/css/loader.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+        <script src="projects/beauty.js"></script>
+        <script src="assets/js/a076d05399.js"></script>
+        <style>
+            
+            *
+            {
+                box-sizing: border-box;
+            }
 
-      @keyframes fadein 
-      {
-        from 
-        { 
-          opacity: 0; 
-        }
-        to
-        {
-          opacity: 1; 
-        }
-      }
+            @keyframes fadein 
+            {
+                from 
+                { 
+                    opacity: 0; 
+                }
+                to
+                {
+                    opacity: 1; 
+                }
+            }
 
-      @-moz-keyframes fadein
-      {
-        from 
-        { 
-          opacity: 0; 
-        }
-        to
-        {
-          opacity: 1; 
-        }
-      }
+            @-moz-keyframes fadein
+            {
+                from 
+                { 
+                    opacity: 0; 
+                }
+                to
+                {
+                    opacity: 1; 
+                }
+            }
 
-      @-webkit-keyframes fadein
-      {
-        from 
-        { 
-          opacity: 0; 
-        }
-        to
-        {
-          opacity: 1; 
-        }
-      }
+            @-webkit-keyframes fadein
+            {
+                from 
+                { 
+                    opacity: 0; 
+                }
+                to
+                {
+                    opacity: 1; 
+                }
+            }
 
-      @-ms-keyframes fadein
-      {
-        from 
-        { 
-          opacity: 0; 
-        }
-        to
-        {
-          opacity: 1; 
-        }
-      }
+            @-ms-keyframes fadein
+            {
+                from 
+                { 
+                    opacity: 0; 
+                }
+                to
+                {
+                    opacity: 1; 
+                }
+            }
 
-      @-o-keyframes fadein 
-      {
-        from 
-        { 
-          opacity: 0; 
-        }
-        to
-        {
-          opacity: 1; 
-        }
-      }
-    
-      a:link 
-      {
-        color: white;
-        background-color: transparent;
-        text-decoration: none;
-      }
-
-      a:visited 
-      {
-        color: white;
-        background-color: transparent;
-        text-decoration: none;
-      }
-
-      a:hover 
-      {
-        color: #FFFFBF;
-        background-color: transparent;
-        text-decoration: underline;
-      }
-
-      body 
-      {
-        -webkit-animation: fadein 0s;
-        -moz-animation: fadein 0s;
-        -ms-animation: fadein 0s;
-        -o-animation: fadein 0s;
-        animation: fadein 0s;
-        font-family: "Montserrat";
-        padding: 20px;
-        color: white;
-        background-image: url("assets/images/circuit_dark.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-attachment: fixed;
-      }
-
-      .header 
-      {
-        -webkit-animation: fadein 2s;
-        -moz-animation: fadein 2s;
-        -ms-animation: fadein 2s;
-        -o-animation: fadein 2s;
-        animation: fadein 2s;
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-bottom: 30px;
-        padding-top: 30px;
-        margin-bottom: 0px;
-        color: lightgoldenrodyellow;
-        font-size: 55px;
-        font-weight: bold;
-        text-align: center;
-        border-radius: 8px;
-        border: 0px;
-      }
-      
-      .header span
-      {
-        margin-top: 0px;
-        padding-top: 0px;
-        margin-bottom: 30px;
-        color: lightgoldenrodyellow;
-        font-size: 28px;
-        font-weight: bold;
-      }
-      
-      .footer 
-      {
-        font-family: arial;
-        padding-bottom: 5px;
-        padding-top: 30px;
-        margin-top: 25px;
-        margin-bottom: 0px;
-        color: white;
-        font-size: 21px;
-        font-weight: bold;
-        text-align: center;
-      }
-      
-      .header_br
-      {
-        font-size: 6px;
-        padding: 0px;
-        margin: 0px;
-      }
-
-      .rightcolumn 
-      {   
-        -webkit-animation: fadein 3s;
-        -moz-animation: fadein 3s;
-        -ms-animation: fadein 3s;
-        -o-animation: fadein 3s;
-        animation: fadein 3s;
-        float: left;
-        width: 75%;
-      }
-
-      .leftcolumn
-      {
-        -webkit-animation: fadein 5s;
-        -moz-animation: fadein 5s;
-        -ms-animation: fadein 5s;
-        -o-animation: fadein 5s;
-        animation: fadein 5s;
-        float: left;
-        width: 25%;
-        padding-right: 20px;
-      }
-
-      .fakeimg 
-      {
-        background-color: #aaa;
-        width: 100%;
-        padding: 20px;
-      }
-
-      .card 
-      {
-        background-color: #FF6347;
-        border-radius: 8px;
-        border: 0px;
-        padding: 20px;
-        margin-top: 15px;
-      }
-      
-      .card_aboutme 
-      {
-        -webkit-animation: fadein 4s;
-        -moz-animation: fadein 4s;
-        -ms-animation: fadein 4s;
-        -o-animation: fadein 4s;
-        animation: fadein 4s;
-        background-color: #146780;
-        border-radius: 8px;
-        border: 0px;
-        padding: 20px;
-        margin-top: 15px;
-      }
-      
-      .card_projects 
-      {
-        -webkit-animation: fadein 6s;
-        -moz-animation: fadein 6s;
-        -ms-animation: fadein 6s;
-        -o-animation: fadein 6s;
-        animation: fadein 6s;
-        background-color: #146780;
-        border-radius: 8px;
-        border: 0px;
-        padding: 5px;
-        margin-top: 15px;
-      }
-      
-      .card_followme 
-      {
-        -webkit-animation: fadein 8s;
-        -moz-animation: fadein 8s;
-        -ms-animation: fadein 8s;
-        -o-animation: fadein 8s;
-        animation: fadein 8s;
-        background-color: #FF8C00;
-        border-radius: 8px;
-        border: 0px;
-        padding-left: 15px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        margin-top: 15px;
-      }
-
-      .row:after 
-      {
-        content: "";
-        display: table;
-        clear: both;
-      }
-
-      @media screen and (max-width: 800px) 
-      {
-        .leftcolumn, .rightcolumn 
-        {   
-          width: 100%;
-          padding: 0;
-        }
-      }
-      
-      .profile
-      {
-        margin-right: 0px;
-        width: 85%;
-        height: 40%;
-        border-radius: 21px;
-      }
-      
-      #header_div
-      {
-         position: relative;
-      }
-    
-    </style>
-  </head>
-  <body onload="stopLoader()">
-    <script>
-
-      function startLoader()
-      {
-          var loader = document.createElement("div");
-          loader.setAttribute("class", "loader");
-          loader.setAttribute("id", "loadr");
-          document.body.appendChild(loader);
-          var loaderb = document.createElement("div");
-          loaderb.setAttribute("class", "overlay");
-          loaderb.setAttribute("id", "loadrb");
-          document.body.appendChild(loaderb);
-      }
-
-      function stopLoader()
-      {
-          try
-          {
-              var element = document.getElementById("loadr");
-              element.parentNode.removeChild(element);
-              var elementb = document.getElementById("loadrb");
-              elementb.parentNode.removeChild(elementb);
-          }
-          catch (e){}
-      }
-
-      startLoader();
-
-    </script>
-    <div id="header_div" class="header">
-      <p>
-        ABHAY TRIPATHI
-        <br class="header_br">
-        <span><i>A passionate learner</i></span>
-      </p>
-    </div>
-
-    <div class="leftcolumn">
-      <div class="card_aboutme">
-        <h2>About Me</h2>
-        <img src="assets/images/profile.png" class="profile">
-        <p style="text-align: justify;">
-          I am a technology enthusiast and love making apps and modules to solve real
-          world day-to-day problems. I also like to create small games as an hobby.
-          <br><br>
-          <b style="border-bottom: 1px white solid; padding-bottom: 2px;">My Academic Qualification</b>
-          <br><br>
-          I am currently a <b>First Year Student of B.Tech Computer Science and Engineering at Manipal University Jaipur</b>.
-          <br><br>
-          <b style="border-bottom: 1px white solid; padding-bottom: 2px;">Technical Skills I have</b>
-          <br><br>
-          As I intend to make projects that can solve real world day-to-day problems, I always try to maximize the usage of <b>Horizontally Scalable Technologies</b> as these technologies are capable of handling huge traffic with optimal performace.
-          <br><br>
-          Currently, I have learnt and used various types of technologies which are listed below in the next section to make apps, modules and games.
-          <br><br>
-          I am learning many more technologies to increase my knowledge in the Information Technology Domain and to improve my Software Engineering skills. I will keep updating my technical skills in the section below.
-          <br>
-          <hr width="100%">
-          <h4 style="margin: 1px;">My Current Technical Skills</h4>
-          <hr width="100%" style="margin-bottom: 24px;">
-          <b style="border-bottom: 1px white solid; padding-bottom: 2px;">Native App Development</b>
-          <br><br>
-          <div style="display: inline-flex; align-items: center; margin-top: 7px;">
-            <img src="assets/images/logos/java.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; padding: 2px;">
-            <div style="display: inline-flex; margin-left: 12px;">
-              <b>Java</b>
-            </div>
-          </div>
-          <br><br>
-          <div style="display: inline-flex; align-items: center;">
-            <img src="assets/images/logos/android.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; padding: 2px;">
-            <div style="display: inline-flex; margin-left: 12px;">
-              <b>Android App Development<br>(Android Java SDK and XML)</b>
-            </div>
-          </div>
-          <br><br>
-          <div style="display: inline-flex; align-items: center;">
-            <img src="assets/images/logos/python.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; padding: 2px;">
-            <div style="display: inline-flex; margin-left: 12px;">
-              <b>Python</b>
-            </div>
-          </div>
-          <br><br>
-          <div style="display: inline-flex; align-items: center;">
-            <img src="assets/images/logos/c.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; padding: 2px;">
-            <div style="display: inline-flex; margin-left: 12px;">
-              <b>C Programming</b>
-            </div>
-          </div>
-          <br><br>
-          <b style="border-bottom: 1px white solid; padding-bottom: 2px;">Production Environments</b>
-          <br><br>
-          <div style="display: inline-flex; align-items: center;">
-            <img src="assets/images/logos/linux.svg" height="30px" width="30px" style="display: inline-flex; border-radius: 8px !important; background-color: white; padding: 2px;  margin-top: 7px;">
-            <div style="display: inline-flex; margin-left: 12px;">
-              <b>Linux</b>
-            </div>
-          </div>
-          <br><br>
-          <div style="display: inline-flex; align-items: center;">
-            <img src="assets/images/logos/windows.png" height="30px" width="30px" style="display: inline-flex; border-radius: 8px !important; background-color: white; padding: 2px;">
-            <div style="display: inline-flex; margin-left: 12px;">
-              <b>Microsoft Windows</b>
-            </div>
-          </div>
-          <br><br>
-          <b style="border-bottom: 1px white solid; padding-bottom: 2px;">Web Development</b>
-          <br><br>
-          <div style="display: inline-flex; align-items: center; margin-top: 7px;">
-            <img src="assets/images/logos/html.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; padding: 2px;">
-            <div style="display: inline-flex; margin-left: 12px;">
-              <b>HTML</b>
-            </div>
-          </div>
-          <br><br>
-          <div style="display: inline-flex; align-items: center;">
-            <img src="assets/images/logos/css.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; padding: 2px;">
-            <div style="display: inline-flex; margin-left: 12px;">
-              <b>CSS</b>
-            </div>
-          </div>
-          <br><br>
-          <div style="display: inline-flex; align-items: center;">
-            <img src="assets/images/logos/js.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; padding: 2px;">
-            <div style="display: inline-flex; margin-left: 12px;">
-              <b>JavaScript</b>
-            </div>
-          </div>
-          <br><br>
-          <div style="display: inline-flex; align-items: center;">
-            <img src="assets/images/logos/jquery.png" height="30px" width="30px" style="display: inline-flex; border-radius: 8px !important; background-color: white; padding: 2px;">
-            <div style="display: inline-flex; margin-left: 12px;">
-              <b>JQuery</b>
-            </div>
-          </div>
-          <br><br>
-          <div style="display: inline-flex; align-items: center;">
-            <img src="assets/images/logos/bootstrap.png" height="30px" width="30px" style="display: inline-flex;">
-            <div style="display: inline-flex; margin-left: 12px;">
-              <b>Bootstrap Framework</b>
-            </div>
-          </div>
-          <br><br>
-          <div style="display: inline-flex; align-items: center;">
-            <img src="assets/images/logos/pwa.png" height="30px" width="30px" style="display: inline-flex;">
-            <div style="display: inline-flex; margin-left: 12px;">
-              <b>Progressive Web Apps (PWAs)</b>
-            </div>
-          </div>
-          <br><br>
-          <div style="display: inline-flex; align-items: center;">
-            <img src="assets/images/logos/rest.png" height="30px" width="30px" style="display: inline-flex;">
-            <div style="display: inline-flex; margin-left: 12px;">
-              <b>REST APIs</b>
-            </div>
-          </div>
-          <br><br>
-          <div style="display: inline-flex; align-items: center;">
-            <img src="assets/images/logos/flask.svg" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; padding: 2px;">
-            <div style="display: inline-flex; margin-left: 12px;">
-              <b>Flask Web Framework</b>
-            </div>
-          </div>
-          <br><br>
-          <div style="display: inline-flex; align-items: center;">
-            <img src="assets/images/logos/php.png" height="30px" width="30px" style="display: inline-flex;">
-            <div style="display: inline-flex; margin-left: 12px;">
-              <b>PHP</b>
-            </div>
-          </div>
-          <br><br>
-          <div style="display: inline-flex; align-items: center;">
-            <img src="assets/images/logos/ws.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; padding: 2px;">
-            <div style="display: inline-flex; margin-left: 12px;">
-              <b>Web Socket Server</b>
-            </div>
-          </div>
-          <br><br>
-          <div style="display: inline-flex; align-items: center;">
-            <img src="assets/images/logos/apache.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; padding: 2px;">
-            <div style="display: inline-flex; margin-left: 12px;">
-              <b>Apache Web Server</b>
-            </div>
-          </div>
-          <br><br>
-          <div style="display: inline-flex; align-items: center;">
-            <img src="assets/images/logos/nginx.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; padding: 2px;">
-            <div style="display: inline-flex; margin-left: 12px;">
-              <b>NGINX Web Server</b>
-            </div>
-          </div>
-          <br><br>
-          <div style="display: inline-flex; align-items: center;">
-            <img src="assets/images/logos/cgi.png" height="30px" width="30px" style="display: inline-flex; border-radius: 8px !important; background-color: white; padding: 2px;">
-            <div style="display: inline-flex; margin-left: 12px;">
-              <b>CGI Programming</b>
-            </div>
-          </div>
-          <br><br>
-          <b style="border-bottom: 1px white solid; padding-bottom: 2px;">Network Programming</b>
-          <br><br>
-          <div style="display: inline-flex; align-items: center; margin-top: 7px;">
-            <img src="assets/images/logos/tcp.png" height="30px" width="30px" style="display: inline-flex; border-radius: 8px !important; background-color: white; padding: 2px;">
-            <div style="display: inline-flex; margin-left: 12px;">
-              <b>TCP Sockets Programming</b>
-            </div>
-          </div>
-          <br><br>
-          <b style="border-bottom: 1px white solid; padding-bottom: 2px;">Cloud Database</b>
-          <br><br>
-          <div style="display: inline-flex; align-items: center; margin-top: 7px;">
-            <img src="assets/images/logos/firebase.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; padding: 2px;">
-            <div style="display: inline-flex; margin-left: 12px;">
-              <b>Firebase Realtime Database</b>
-            </div>
-          </div>
-          <br><br>
-          <b style="border-bottom: 1px white solid; padding-bottom: 2px;">SQL Database</b>
-          <br><br>
-          <div style="display: inline-flex; align-items: center; margin-top: 7px;">
-            <img src="assets/images/logos/mysql.png" height="30px" width="30px" style="display: inline-flex; border-radius: 8px !important; background-color: white; padding: 2px;">
-            <div style="display: inline-flex; margin-left: 12px;">
-              <b>MySQL</b>
-            </div>
-          </div>
-          <br><br>
-          <div style="display: inline-flex; align-items: center;">
-            <img src="assets/images/logos/mariadb.png" height="30px" width="30px" style="display: inline-flex; border-radius: 8px !important; background-color: white; padding: 2px;">
-            <div style="display: inline-flex; margin-left: 12px;">
-              <b>MariaDB</b>
-            </div>
-          </div>
-          <br><br>
-          <b style="border-bottom: 1px white solid; padding-bottom: 2px;">NoSQL Database</b>
-          <br><br>
-          <div style="display: inline-flex; align-items: center; margin-top: 7px;">
-            <img src="assets/images/logos/mongodb.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; padding: 2px;">
-            <div style="display: inline-flex; margin-left: 12px;">
-              <b>MongoDB</b>
-            </div>
-          </div>
-          <br><br>
-          <b style="border-bottom: 1px white solid; padding-bottom: 2px;">Cloud Computing</b>
-          <br><br>
-          <div style="display: inline-flex; align-items: center; margin-top: 7px;">
-            <img src="assets/images/logos/aws.png" height="30px" width="30px" style="display: inline-flex; border-radius: 8px !important; background-color: white;">
-            <div style="display: inline-flex; margin-left: 12px;">
-              <b>Amazon Web Services (AWS) EC2 Instance Hosting and Management</b>
-            </div>
-          </div>
-          <br><br>
-          <hr width="100%">
-          <br>
-          One can go through my projects and modules which are listed on this page (More on my Github Page).<br><br>
-          One can contact me through the contact details listed below.<br><br>
-          Have a nice day!
-        </p>
-      </div>
-    
-      <div class="card_followme">
-        <h3>Contact/Follow Me</h3>
-        <p><a href="https://twitter.com/abhaytriipathi" class="fab fa-twitter fa-lg" target="_blank">&nbsp;@abhaytriipathi</a></p>
-        <p><a href="https://facebook.com/abhaytripathii" class="fab fa-facebook fa-lg" target="_blank">&nbsp;@abhaytripathii</a></p>
-        <p><a href="https://github.com/AbhayTr" class="fab fa-github fa-lg" target="_blank">&nbsp;@AbhayTr</a></p>
-        <p><a href="https://www.hackerrank.com/abhaytr" class="fab fa-hackerrank fa-lg" target="_blank">&nbsp;@AbhayTr</a></p>
-        <p><a href="mailto:abhay.triipathi@gmail.com" class="fas fa-envelope fa-lg" target="_blank">&nbsp;<font style="font-weight: normal;">E-Mail Me</font></a></p>
-        <p><a href="tel: +91 8800958568" class="fas fa-phone-alt fa-lg" target="_blank">&nbsp;<font style="font-weight: normal;">+91-8800958568</font></a></p>
-        <p><a href="https://t.me/abhayt" class="fab fa-telegram fa-lg" target="_blank">&nbsp;@AbhayT</a></p>
-        <p><a href="https://wa.me/918800958568" class="fab fa-whatsapp fa-lg" target="_blank">&nbsp;+91-8800958568</a></p>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="rightcolumn">
+            @-o-keyframes fadein 
+            {
+                from 
+                { 
+                    opacity: 0; 
+                }
+                to
+                {
+                    opacity: 1; 
+                }
+            }
         
-        <div class="card_projects">
-          <h3><center>Some of my projects and modules (All can be viewed at my github page)</center></h3>
+            a:link 
+            {
+                color: white;
+                background-color: transparent;
+                text-decoration: none;
+            }
+
+            a:visited 
+            {
+                color: white;
+                background-color: transparent;
+                text-decoration: none;
+            }
+
+            a:hover 
+            {
+                color: #FFFFBF;
+                background-color: transparent;
+                text-decoration: underline;
+            }
+
+            body 
+            {
+                -webkit-animation: fadein 0s;
+                -moz-animation: fadein 0s;
+                -ms-animation: fadein 0s;
+                -o-animation: fadein 0s;
+                animation: fadein 0s;
+                font-family: "Montserrat";
+                padding: 0px;
+                color: white;
+                background-image: url("assets/images/circuit_dark.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-attachment: fixed;
+            }
+
+            .body_div
+            {
+                padding: 20px;
+            }
+
+            .header 
+            {
+                -webkit-animation: fadein 2s !important;
+                -moz-animation: fadein 2s !important;
+                -ms-animation: fadein 2s !important;
+                -o-animation: fadein 2s !important;
+                animation: fadein 2s !important;
+                color: lightgoldenrodyellow;
+                font-size: 55px;
+                font-weight: bold;
+                text-align: center;
+                line-height: normal;
+                border-radius: 14px !important;
+                padding: 56px !important;
+            }
+            
+            .header span
+            {
+                color: lightgoldenrodyellow;
+                font-size: 28px;
+                font-weight: bold;
+                vertical-align: top;
+            }
+            
+            .footer 
+            {
+                font-family: arial;
+                padding-bottom: 5px;
+                padding-top: 30px;
+                margin-top: 25px;
+                margin-bottom: 0px;
+                color: white;
+                font-size: 21px;
+                font-weight: bold;
+                text-align: center;
+            }
+            
+            .header_br
+            {
+                font-size: 6px;
+                padding: 0px;
+                margin: 0px;
+            }
+
+            .rightcolumn 
+            {     
+                -webkit-animation: fadein 3s;
+                -moz-animation: fadein 3s;
+                -ms-animation: fadein 3s;
+                -o-animation: fadein 3s;
+                animation: fadein 3s;
+                float: left;
+                width: 75%;
+            }
+
+            .leftcolumn
+            {
+                -webkit-animation: fadein 5s;
+                -moz-animation: fadein 5s;
+                -ms-animation: fadein 5s;
+                -o-animation: fadein 5s;
+                animation: fadein 5s;
+                float: left;
+                width: 25%;
+                padding-right: 20px;
+            }
+
+            .fakeimg 
+            {
+                background-color: #aaa;
+                width: 100%;
+                padding: 20px;
+            }
+            
+            .card_aboutme 
+            {
+                -webkit-animation: fadein 4s;
+                -moz-animation: fadein 4s;
+                -ms-animation: fadein 4s;
+                -o-animation: fadein 4s;
+                animation: fadein 4s;
+                background-color: #146780;
+                padding: 20px;
+                margin-top: 8px;
+                border-radius: 14px;
+            }
+            
+            .card_projects 
+            {
+                -webkit-animation: fadein 6s;
+                -moz-animation: fadein 6s;
+                -ms-animation: fadein 6s;
+                -o-animation: fadein 6s;
+                animation: fadein 6s;
+                background-color: #146780;
+                border-radius: 14px;
+                padding: 5px;
+                margin-top: 8px;
+            }
+            
+            .card_followme 
+            {
+                -webkit-animation: fadein 8s;
+                -moz-animation: fadein 8s;
+                -ms-animation: fadein 8s;
+                -o-animation: fadein 8s;
+                animation: fadein 8s;
+                background-color: #FF8C00;
+                border-radius: 14px;
+                padding-left: 15px;
+                padding-top: 5px;
+                padding-bottom: 25px;
+                margin-top: 11px;
+            }
+
+            .card_project
+            {
+                background-color: #FF6347;
+                padding: 20px;
+                border-radius: 14px;
+                margin-top: 10px;
+            }
+
+            .rownbs:after
+            {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+            @media screen and (max-width: 800px) 
+            {
+                .leftcolumn, .rightcolumn 
+                {     
+                    width: 100%;
+                    padding: 0;
+                }
+            }
+            
+            .profile
+            {
+                margin-right: 0px;
+                width: 85%;
+                height: 40%;
+                border-radius: 21px;
+            }
+            
+            #header_div
+            {
+                 position: relative;
+            }
+
+            hr
+            {
+                display: block;
+                unicode-bidi: isolate;
+                margin-block-start: 0.5em;
+                margin-block-end: 0.5em;
+                margin-inline-start: auto;
+                margin-inline-end: auto;
+                overflow: hidden;
+                border-style: inset;
+                border-width: 1px;
+            }
+
+            h3
+            {
+                display: block;
+                font-size: 1.17em;
+                margin-block-start: 1em;
+                margin-block-end: 1em;
+                margin-inline-start: 0px;
+                margin-inline-end: 0px;
+                font-weight: bold;
+            }
+
+            h4
+            {
+                display: block;
+                margin-block-start: 1.33em;
+                margin-block-end: 1.33em;
+                margin-inline-start: 0px;
+                margin-inline-end: 0px;
+                font-weight: bold;
+            }
+
+            h2
+            {
+                display: block;
+                font-size: 1.5em;
+                margin-block-start: 0.83em;
+                margin-block-end: 0.83em;
+                margin-inline-start: 0px;
+                margin-inline-end: 0px;
+                font-weight: bold;
+            }
+
+            p
+            {
+                display: block;
+                margin-block-start: 0em;
+                margin-block-end: 0em;
+                margin-inline-start: 0px;
+                margin-inline-end: 0px;
+            }
+
+            ul
+            {
+                display: block;
+                list-style-type: disc;
+                margin-block-start: 1em;
+                margin-block-end: 1em;
+                margin-inline-start: 0px;
+                margin-inline-end: 0px;
+                padding-inline-start: 40px;
+            }
+        
+        </style>
+    </head>
+    <body onload="stopLoader()">
+        <script>
+
+            function startLoader()
+            {
+                var loader = document.createElement("div");
+                loader.setAttribute("class", "loader");
+                loader.setAttribute("id", "loadr");
+                document.body.appendChild(loader);
+                var loaderb = document.createElement("div");
+                loaderb.setAttribute("class", "overlay");
+                loaderb.setAttribute("id", "loadrb");
+                document.body.appendChild(loaderb);
+            }
+
+            function stopLoader()
+            {
+                try
+                {
+                    var element = document.getElementById("loadr");
+                    element.parentNode.removeChild(element);
+                    var elementb = document.getElementById("loadrb");
+                    elementb.parentNode.removeChild(elementb);
+                }
+                catch (e){}
+            }
+
+            startLoader();
+
+        </script>
+        <div class="body_div">
+            <div class="row h-100">
+                <div class="col-sm-12 my-auto">
+                    <div class="card card-block w-100 header" id="header_div">
+                        ABHAY TRIPATHI
+                        <br class="header_br">
+                        <span><i>A passionate learner</i></span>
+                    </div>
+                </div>
+            </div>
+            <div class="leftcolumn">
+                <div class="row h-100">
+                    <div class="col-sm-12 my-auto">
+                        <div class="card card-block w-100 card_aboutme">
+                            <h2>About Me</h2>
+                            <img src="assets/images/profile.png" class="profile">
+                            <p style="text-align: justify; margin-top: 12px; margin-bottom: 0px;">
+                                I am a technology enthusiast and love making apps and modules to solve real
+                                world day-to-day problems. I also like to create small games as an hobby.
+                                <br>
+                                <b style="border-bottom: 1px white solid; display:inline-table; padding-bottom: 2px; margin-top: 16px; margin-bottom: 16px; width: 100%; border-top: 1px white solid; padding-top: 2px;">My Academic Qualification</b>
+                                <br>
+                                I am currently a <b>First Year Student of B.Tech Computer Science and Engineering at Manipal University Jaipur</b>. I will graduate in the year 2025.
+                                <br>
+                                <b style="border-bottom: 1px white solid; display:inline-table; padding-bottom: 2px; margin-top: 16px; margin-bottom: 16px; width: 100%; border-top: 1px white solid; padding-top: 2px;">Technical Skills I have</b>
+                                <br>
+                                As I intend to make projects that can solve real world day-to-day problems, I always try to maximize the usage of <b>Horizontally Scalable Technologies</b> as these technologies are capable of handling huge traffic with optimal performace.
+                                <br><br>
+                                Currently, I have learnt and used various types of technologies which are listed below in the next section to make apps, modules and games.
+                                <br><br>
+                                I am learning many more technologies to increase my knowledge in the Information Technology Domain and to improve my Software Engineering skills. I will keep updating my technical skills in the section below.
+                                <hr width="100%" style="display: inline-table; margin-top: 16px;">
+                                <h4 style="margin: 1px;">My Current Technical Skills</h4>
+                                <hr width="100%">
+                                <b style="border-bottom: 1px white solid; display:inline-table; padding-bottom: 2px; margin-top: 16px; width: 100%; border-top: 1px white solid; padding-top: 2px;">Native App Development</b>
+                                <div style="display: inline-flex; align-items: center; margin-top: 11px;">
+                                    <img src="assets/images/logos/java.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; padding: 2px;">
+                                    <div style="display: inline-flex; margin-left: 12px;">
+                                        <b>Java</b>
+                                    </div>
+                                </div>
+                                <div style="display: inline-flex; align-items: center; margin-top: 9px;">
+                                    <img src="assets/images/logos/android.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; padding: 2px;">
+                                    <div style="display: inline-flex; margin-left: 12px;">
+                                        <b>Android App Development<br>(Android Java SDK and XML)</b>
+                                    </div>
+                                </div>
+                                <div style="display: inline-flex; align-items: center; margin-top: 9px;">
+                                    <img src="assets/images/logos/python.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; padding: 2px;">
+                                    <div style="display: inline-flex; margin-left: 12px;">
+                                        <b>Python</b>
+                                    </div>
+                                </div>
+                                <div style="display: inline-flex; align-items: center; margin-top: 9px;">
+                                    <img src="assets/images/logos/c.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; padding: 2px;">
+                                    <div style="display: inline-flex; margin-left: 12px;">
+                                        <b>C Programming</b>
+                                    </div>
+                                </div>
+                                <b style="border-bottom: 1px white solid; display:inline-table; padding-bottom: 2px; margin-top: 16px; width: 100%; border-top: 1px white solid; padding-top: 2px;">Production Environments</b>
+                                <div style="display: inline-flex; align-items: center; margin-top: 11px;">
+                                    <img src="assets/images/logos/linux.svg" height="30px" width="30px" style="display: inline-flex; border-radius: 8px !important; background-color: white; padding: 2px;    margin-top: 7px;">
+                                    <div style="display: inline-flex; margin-left: 12px;">
+                                        <b>Linux</b>
+                                    </div>
+                                </div>
+                                <div style="display: inline-flex; align-items: center; margin-top: 9px;">
+                                    <img src="assets/images/logos/windows.png" height="30px" width="30px" style="display: inline-flex; border-radius: 8px !important; background-color: white; padding: 2px;">
+                                    <div style="display: inline-flex; margin-left: 12px;">
+                                        <b>Microsoft Windows</b>
+                                    </div>
+                                </div>
+                                <b style="border-bottom: 1px white solid; display:inline-table; padding-bottom: 2px; margin-top: 16px; width: 100%; border-top: 1px white solid; padding-top: 2px;">Web Development</b>
+                                <div style="display: inline-flex; align-items: center; margin-top: 11px;">
+                                    <img src="assets/images/logos/html.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; padding: 2px;">
+                                    <div style="display: inline-flex; margin-left: 12px;">
+                                        <b>HTML</b>
+                                    </div>
+                                </div>
+                                <div style="display: inline-flex; align-items: center; margin-top: 9px;">
+                                    <img src="assets/images/logos/css.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; padding: 2px;">
+                                    <div style="display: inline-flex; margin-left: 12px;">
+                                        <b>CSS</b>
+                                    </div>
+                                </div>
+                                <div style="display: inline-flex; align-items: center; margin-top: 9px;">
+                                    <img src="assets/images/logos/js.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; padding: 2px;">
+                                    <div style="display: inline-flex; margin-left: 12px;">
+                                        <b>JavaScript</b>
+                                    </div>
+                                </div>
+                                <div style="display: inline-flex; align-items: center; margin-top: 9px;">
+                                    <img src="assets/images/logos/jquery.png" height="30px" width="30px" style="display: inline-flex; border-radius: 8px !important; background-color: white; padding: 2px;">
+                                    <div style="display: inline-flex; margin-left: 12px;">
+                                        <b>JQuery</b>
+                                    </div>
+                                </div>
+                                <div style="display: inline-flex; align-items: center; margin-top: 9px;">
+                                    <img src="assets/images/logos/bootstrap.png" height="30px" width="30px" style="display: inline-flex;">
+                                    <div style="display: inline-flex; margin-left: 12px;">
+                                        <b>Bootstrap Framework</b>
+                                    </div>
+                                </div>
+                                <div style="display: inline-flex; align-items: center; margin-top: 9px;">
+                                    <img src="assets/images/logos/pwa.png" height="30px" width="30px" style="display: inline-flex;">
+                                    <div style="display: inline-flex; margin-left: 12px;">
+                                        <b>Progressive Web Apps (PWAs)</b>
+                                    </div>
+                                </div>
+                                <div style="display: inline-flex; align-items: center; margin-top: 9px;">
+                                    <img src="assets/images/logos/rest.png" height="30px" width="30px" style="display: inline-flex;">
+                                    <div style="display: inline-flex; margin-left: 12px;">
+                                        <b>REST APIs</b>
+                                    </div>
+                                </div>
+                                <div style="display: inline-flex; align-items: center; margin-top: 9px;">
+                                    <img src="assets/images/logos/flask.svg" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; padding: 2px;">
+                                    <div style="display: inline-flex; margin-left: 12px;">
+                                        <b>Flask Web Framework</b>
+                                    </div>
+                                </div>
+                                <div style="display: inline-flex; align-items: center; margin-top: 9px;">
+                                    <img src="assets/images/logos/php.png" height="30px" width="30px" style="display: inline-flex;">
+                                    <div style="display: inline-flex; margin-left: 12px;">
+                                        <b>PHP</b>
+                                    </div>
+                                </div>
+                                <div style="display: inline-flex; align-items: center; margin-top: 9px;">
+                                    <img src="assets/images/logos/ws.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; padding: 2px;">
+                                    <div style="display: inline-flex; margin-left: 12px;">
+                                        <b>Web Socket Server</b>
+                                    </div>
+                                </div>
+                                <div style="display: inline-flex; align-items: center; margin-top: 9px;">
+                                    <img src="assets/images/logos/apache.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; padding: 2px;">
+                                    <div style="display: inline-flex; margin-left: 12px;">
+                                        <b>Apache Web Server</b>
+                                    </div>
+                                </div>
+                                <div style="display: inline-flex; align-items: center; margin-top: 9px;">
+                                    <img src="assets/images/logos/nginx.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; padding: 2px;">
+                                    <div style="display: inline-flex; margin-left: 12px;">
+                                        <b>NGINX Web Server</b>
+                                    </div>
+                                </div>
+                                <div style="display: inline-flex; align-items: center; margin-top: 9px;">
+                                    <img src="assets/images/logos/cgi.png" height="30px" width="30px" style="display: inline-flex; border-radius: 8px !important; background-color: white; padding: 2px;">
+                                    <div style="display: inline-flex; margin-left: 12px;">
+                                        <b>CGI Programming</b>
+                                    </div>
+                                </div>
+                                <b style="border-bottom: 1px white solid; display:inline-table; padding-bottom: 2px; margin-top: 16px; width: 100%; border-top: 1px white solid; padding-top: 2px;">Network Programming</b>
+                                <div style="display: inline-flex; align-items: center; margin-top: 11px;">
+                                    <img src="assets/images/logos/tcp.png" height="30px" width="30px" style="display: inline-flex; border-radius: 8px !important; background-color: white; padding: 2px;">
+                                    <div style="display: inline-flex; margin-left: 12px;">
+                                        <b>TCP Sockets Programming</b>
+                                    </div>
+                                </div>
+                                <b style="border-bottom: 1px white solid; display:inline-table; padding-bottom: 2px; margin-top: 16px; width: 100%; border-top: 1px white solid; padding-top: 2px;">Cloud Database</b>
+                                <div style="display: inline-flex; align-items: center; margin-top: 11px;">
+                                    <img src="assets/images/logos/firebase.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; padding: 2px;">
+                                    <div style="display: inline-flex; margin-left: 12px;">
+                                        <b>Firebase Realtime Database</b>
+                                    </div>
+                                </div>
+                                <b style="border-bottom: 1px white solid; display:inline-table; padding-bottom: 2px; margin-top: 16px; width: 100%; border-top: 1px white solid; padding-top: 2px;">SQL Database</b>
+                                <div style="display: inline-flex; align-items: center; margin-top: 11px;">
+                                    <img src="assets/images/logos/mysql.png" height="30px" width="30px" style="display: inline-flex; border-radius: 8px !important; background-color: white; padding: 2px;">
+                                    <div style="display: inline-flex; margin-left: 12px;">
+                                        <b>MySQL</b>
+                                    </div>
+                                </div>
+                                <div style="display: inline-flex; align-items: center; margin-top: 9px;">
+                                    <img src="assets/images/logos/mariadb.png" height="30px" width="30px" style="display: inline-flex; border-radius: 8px !important; background-color: white; padding: 2px;">
+                                    <div style="display: inline-flex; margin-left: 12px;">
+                                        <b>MariaDB</b>
+                                    </div>
+                                </div>
+                                <b style="border-bottom: 1px white solid; display:inline-table; padding-bottom: 2px; margin-top: 16px; width: 100%; border-top: 1px white solid; padding-top: 2px;">NoSQL Database</b>
+                                <div style="display: inline-flex; align-items: center; margin-top: 11px;">
+                                    <img src="assets/images/logos/mongodb.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; padding: 2px;">
+                                    <div style="display: inline-flex; margin-left: 12px;">
+                                        <b>MongoDB</b>
+                                    </div>
+                                </div>
+                                <b style="border-bottom: 1px white solid; display:inline-table; padding-bottom: 2px; margin-top: 16px; width: 100%; border-top: 1px white solid; padding-top: 2px;">Cloud Computing</b>
+                                <div style="display: inline-flex; align-items: center; margin-top: 11px;">
+                                    <img src="assets/images/logos/aws.png" height="30px" width="30px" style="display: inline-flex; border-radius: 8px !important; background-color: white;">
+                                    <div style="display: inline-flex; margin-left: 12px;">
+                                        <b>Amazon Web Services (AWS) EC2 Instance Hosting and Management</b>
+                                    </div>
+                                </div>
+                                <hr width="100%" style="margin-top: 11px; margin-bottom: 11px;">
+                                One can go through my projects and modules which are listed on this page (More on my Github Page).<br><br>
+                                One can contact me through the contact details listed below.<br><br>
+                                Have a nice day!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row h-100">
+                    <div class="col-sm-12 my-auto">
+                        <div class="card card-block w-100 card_followme">
+                            <h3>Contact/Follow Me</h3>
+                            <a href="https://twitter.com/abhaytriipathi" class="fab fa-twitter fa-lg" target="_blank" style="display: inline-table;">&nbsp;@abhaytriipathi</a>
+                            <a href="https://facebook.com/abhaytripathii" class="fab fa-facebook fa-lg" target="_blank" style="display: inline-table; margin-top: 15px;">&nbsp;@abhaytripathii</a>
+                            <a href="https://github.com/AbhayTr" class="fab fa-github fa-lg" target="_blank" style="display: inline-table; margin-top: 15px;">&nbsp;@AbhayTr</a>
+                            <a href="https://www.hackerrank.com/abhaytr" class="fab fa-hackerrank fa-lg" target="_blank" style="display: inline-table; margin-top: 15px;">&nbsp;@AbhayTr</a>
+                            <a href="mailto:abhay.triipathi@gmail.com" class="fas fa-envelope fa-lg" target="_blank" style="display: inline-table; margin-top: 15px;">&nbsp;<font style="font-weight: normal;">E-Mail Me</font></a>
+                            <a href="tel: +91 8800958568" class="fas fa-phone-alt fa-lg" target="_blank" style="display: inline-table; margin-top: 15px;">&nbsp;<font style="font-weight: normal;">+91-8800958568</font></a>
+                            <a href="https://t.me/abhayt" class="fab fa-telegram fa-lg" target="_blank" style="display: inline-table; margin-top: 15px;">&nbsp;@AbhayT</a>
+                            <a href="https://wa.me/918800958568" class="fab fa-whatsapp fa-lg" target="_blank" style="display: inline-table; margin-top: 15px;">&nbsp;+91-8800958568</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="rownbs">
+                <div class="rightcolumn">
+                    <div class="row h-100">
+                        <div class="col-sm-12 my-auto">
+                            <div class="card card-block w-100 card_projects">
+                                <h3><center>Some of my projects and modules (All can be viewed at my github page)</center></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="/digifriend" target="_blank">
+                        <div class="row h-100">
+                            <div class="col-sm-12 my-auto">
+                                <div class="card card-block w-100 card_project">
+                                    <h2>DigiFriend</h2>
+                                    <p>
+                                
+                                        A virtual friend app that makes your phone capable of functioning as modern day smart devices
+                                        (Amazon Alexa, Google Home, etc.).<br>Click here to know more and get the app.
+                                
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://queuescan.com" target="_blank">
+                        <div class="row h-100">
+                            <div class="col-sm-12 my-auto">
+                                <div class="card card-block w-100 card_project">
+                                    <h2>QueueScan</h2>
+                                    <p>
+                                
+                                        An app through which virtual queues can be started anywhere with any QR code. Completely anonymous
+                                        queues with no registration/KYC. Just open the app and start/join a queue via QR code anywhere
+                                        anytime!
+                                
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://github.com/AbhayTr/CString" target="_blank">
+                        <div class="row h-100">
+                            <div class="col-sm-12 my-auto">
+                                <div class="card card-block w-100 card_project">
+                                    <h2>CString</h2>
+                                    <p>
+                                
+                                        C module for working with dynamic strings. This module is very useful for projects where huge amount of dynamic data is involved and efficiency and speed of C programming is required!
+                                
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="row h-100">
+                        <div class="col-sm-12 my-auto">
+                            <div class="card card-block w-100 card_project">
+                                <h2 id="beauty_demo">Beauty</h2>
+                                <p>
+                                    Module for beautifully varying RGB colour sets which can be used for setting colours anywhere.<br>(Demo can be seen in the background of my name present above)
+                                    <br><br>
+                                    Module available in languages:
+                                    <ul>
+                                        <li><a href="https://github.com/AbhayTr/JBeauty" target="_blank"><b>Java (JBeauty)</b></a></li>
+                                        <li><a href="https://pypi.org/project/pybeauty" target="_blank"><b>Python (PyBeauty)</b></a></li>
+                                        <li><a href="https://github.com/AbhayTr/BeautyJS" target="_blank"><b>JS (BeautyJS)</b></a></li>
+                                    </ul>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row h-100">
+                        <div class="col-sm-12 my-auto">
+                            <div class="card card-block w-100 card_project">
+                                <h2><a href="/multicrypt" target="_blank">Multicrypt</a></h2>
+                                <p>
+                                    Module for secure End-2-End encryption using the Multicrypt algorithm made by me.<br>
+                                    <a href="/multicrypt" target="_blank">Click here for online demonstration of the multicrypt encryption system.</a>
+                                    <br><br>
+                                    Module available in languages:
+                                    <ul>
+                                        <li><a href="https://github.com/AbhayTr/JMulticrypt" target="_blank"><b>Java (JMulticrypt)</b></a></li>
+                                        <li><a href="https://pypi.org/project/pymulticrypt" target="_blank"><b>Python (PyMulticrypt)</b></a></li>
+                                        <li><a href="https://github.com/AbhayTr/MulticryptJS" target="_blank"><b>JS (MulticryptJS)</b></a></li>
+                                    </ul>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="https://pypi.org/project/pyfractals" target="_blank">
+                        <div class="row h-100">
+                            <div class="col-sm-12 my-auto">
+                                <div class="card card-block w-100 card_project">
+                                    <h2>PyFractals</h2>
+                                    <p>
+                                
+                                        A python module which visualizes the beautiful yet complex Mandelbrot Fractals design.
+                                
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://pypi.org/project/consolebar" target="_blank">
+                        <div class="row h-100">
+                            <div class="col-sm-12 my-auto">
+                                <div class="card card-block w-100 card_project">
+                                    <h2>ConsoleBar</h2>
+                                    <p>
+                                
+                                        A python module which makes stunning progress bars for loops, iterables etc. in console.
+                                
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="pandemic-simulator" target="_blank">
+                        <div class="row h-100">
+                            <div class="col-sm-12 my-auto">
+                                <div class="card card-block w-100 card_project">
+                                    <h2>Pandemic Simulator</h2>
+                                    <p>
+                                
+                                        A game in which the player has to stop a microbe from becoming a pandemic. Play now!
+                                
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="row h-100">
+                        <div class="col-sm-12 my-auto">
+                            <div class="card card-block w-100 card_projects">
+                                <h3><center>For more projects and modules<br><br class="header_br">go to <a href="https://github.com/AbhayTr" target="_blank"><i class="fab fa-github fa-lg"></i>&nbsp;@AbhayTr</a></center></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        
-        <a href="/digifriend" target="_blank">
-          <div class="card">
-            <h2>DigiFriend</h2>
-            <p>
-          
-              A virtual friend app that makes your phone capable of functioning as modern day smart devices
-              (Amazon Alexa, Google Home, etc.).<br>Click here to know more and get the app.
-          
-            </p>
-          </div>
-        </a>
-        
-        <a href="https://github.com/AbhayTr/CString" target="_blank">
-          <div class="card">
-            <h2>CString</h2>
-            <p>
-          
-              C module for working with dynamic strings. This module is very useful for projects where huge amount of dynamic data is involved and efficiency and speed of C programming is required!
-          
-            </p>
-          </div>
-        </a>
-
-        <div class="card">
-          <h2 id="beauty_demo">Beauty</h2>
-          <p>
-            Module for beautifully varying RGB colour sets which can be used for setting colours anywhere.<br>(Demo can be seen in the background of my name present above)
-            <br><br>
-            Module available in languages:
-            <ul>
-              <li><a href="https://github.com/AbhayTr/JBeauty" target="_blank"><b>Java (JBeauty)</b></a></li>
-              <li><a href="https://pypi.org/project/pybeauty" target="_blank"><b>Python (PyBeauty)</b></a></li>
-              <li><a href="https://github.com/AbhayTr/BeautyJS" target="_blank"><b>JS (BeautyJS)</b></a></li>
-            </ul>
-          </p>
-        </div>
-        
-        <div class="card">
-          <h2><a href="/multicrypt" target="_blank">Multicrypt</a></h2>
-          <p>
-            Module for secure End-2-End encryption using the Multicrypt algorithm made by me.<br>
-            <a href="/multicrypt" target="_blank">Click here for online demonstration of the multicrypt encryption system.</a>
-            <br><br>
-            Module available in languages:
-            <ul>
-              <li><a href="https://github.com/AbhayTr/JMulticrypt" target="_blank"><b>Java (JMulticrypt)</b></a></li>
-              <li><a href="https://pypi.org/project/pymulticrypt" target="_blank"><b>Python (PyMulticrypt)</b></a></li>
-              <li><a href="https://github.com/AbhayTr/MulticryptJS" target="_blank"><b>JS (MulticryptJS)</b></a></li>
-            </ul>
-          </p>
-        </div>
-        
-        <a href="https://pypi.org/project/pyfractals" target="_blank">
-          <div class="card">
-            <h2>PyFractals</h2>
-            <p>
-          
-              A python module which visualizes the beautiful yet complex Mandelbrot Fractals design.
-          
-            </p>
-          </div>
-        </a>
-        
-        <a href="https://pypi.org/project/consolebar" target="_blank">
-          <div class="card">
-            <h2>ConsoleBar</h2>
-            <p>
-          
-              A python module which makes stunning progress bars for loops, iterables etc. in console.
-          
-            </p>
-          </div>
-        </a>
-        
-        <a href="pandemic-simulator" target="_blank">
-          <div class="card">
-            <h2>Pandemic Simulator</h2>
-            <p>
-          
-              A game in which the player has to stop a microbe from becoming a pandemic. Play now!
-          
-            </p>
-          </div>
-        </a>
-        
-        <a href="https://queuescan.com" target="_blank">
-          <div class="card">
-            <h2>QueueScan</h2>
-            <p>
-          
-              An app through which virtual queues can be started anywhere with any QR code. Completely anonymous
-              queues with no registration/KYC. Just open the app and start/join a queue via QR code anywhere
-              anytime!
-          
-            </p>
-          </div>
-        </a>
-        
-        <div class="card_projects">
-          <h3><center>For more projects and modules<br><br class="header_br">go to <a href="https://github.com/AbhayTr" target="_blank"><i class="fab fa-github fa-lg"></i>&nbsp;@AbhayTr</a></center></h3>
-        </div>
-        
-      </div>
-    </div>
-    <p class="footer">
-      &copy; 2022 Abhay Tripathi
-    </p>
-    <script>
-        
-      Beauty
-      (
-        {
-          mode: "dark"
-        },
-        function(rgb_color)
-        {
-          document.getElementById("header_div").style.backgroundColor = "rgb(" + rgb_color[0] + ", " + rgb_color[1] + ", " + rgb_color[2] + ")";
-        }
-      );
-      
-    </script>
-  </body>
+        <footer class="page-footer font-small blue pt-4" style="background-color: #343a40;">
+            <div class="footer-copyright text-center py-3">
+                <p style="font-weight: bold; margin-bottom: 14px;">
+                    &copy; 2022 Abhay Tripathi
+                </p>
+            </div>
+        </footer>
+        <script>
+            
+            Beauty
+            (
+                {
+                    mode: "dark"
+                },
+                function(rgb_color)
+                {
+                    document.getElementById("header_div").style.backgroundColor = "rgb(" + rgb_color[0] + ", " + rgb_color[1] + ", " + rgb_color[2] + ")";
+                }
+            );
+            
+        </script>
+    </body>
 </html>
