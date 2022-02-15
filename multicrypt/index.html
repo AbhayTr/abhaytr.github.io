@@ -123,11 +123,13 @@
     </head>
     <body onload="stopLoader()">
         <script>
-
+        
             function startLoader()
             {
-                var loader = document.createElement("div");
-                loader.setAttribute("class", "loader");
+                var loader = document.createElement("span");
+                loader.setAttribute("class", "spinner-border text-primary loader");
+                loader.setAttribute("role", "status");
+                loader.setAttribute("aria-hidden", "true");
                 loader.setAttribute("id", "loadr");
                 document.body.appendChild(loader);
                 var loaderb = document.createElement("div");

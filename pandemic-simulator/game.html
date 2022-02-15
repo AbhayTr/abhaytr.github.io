@@ -67,17 +67,19 @@
   </head>
   <body onload="stopLoader();createButton();" style="background: url('/assets/images/universe.jpg');">
     <script>
-
+    
       function startLoader()
       {
-          var loader = document.createElement("div");
-          loader.setAttribute("class", "loader");
-          loader.setAttribute("id", "loadr");
-          document.body.appendChild(loader);
-          var loaderb = document.createElement("div");
-          loaderb.setAttribute("class", "overlay");
-          loaderb.setAttribute("id", "loadrb");
-          document.body.appendChild(loaderb);
+        var loader = document.createElement("span");
+        loader.setAttribute("class", "spinner-border text-primary loader");
+        loader.setAttribute("role", "status");
+        loader.setAttribute("aria-hidden", "true");
+        loader.setAttribute("id", "loadr");
+        document.body.appendChild(loader);
+        var loaderb = document.createElement("div");
+        loaderb.setAttribute("class", "overlay");
+        loaderb.setAttribute("id", "loadrb");
+        document.body.appendChild(loaderb);
       }
 
       function stopLoader()
