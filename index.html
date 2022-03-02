@@ -12,7 +12,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-        <link rel="stylesheet" href="assets/css/loader.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
         <script src="projects/beauty.js"></script>
         <script src="assets/js/a076d05399.js"></script>
@@ -377,38 +376,7 @@
         
         </style>
     </head>
-    <body onload="stopLoader()">
-        <script>
-
-            function startLoader()
-            {
-                var loader = document.createElement("span");
-                loader.setAttribute("class", "spinner-border text-primary loader");
-                loader.setAttribute("role", "status");
-                loader.setAttribute("aria-hidden", "true");
-                loader.setAttribute("id", "loadr");
-                document.body.appendChild(loader);
-                var loaderb = document.createElement("div");
-                loaderb.setAttribute("class", "overlay");
-                loaderb.setAttribute("id", "loadrb");
-                document.body.appendChild(loaderb);
-            }
-
-            function stopLoader()
-            {
-                try
-                {
-                    var element = document.getElementById("loadr");
-                    element.parentNode.removeChild(element);
-                    var elementb = document.getElementById("loadrb");
-                    elementb.parentNode.removeChild(elementb);
-                }
-                catch (e){}
-            }
-
-            startLoader();
-
-        </script>
+    <body>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>

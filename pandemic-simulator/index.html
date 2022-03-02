@@ -3,7 +3,6 @@
     <link rel="icon" href="assets/images/germlogo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/assets/css/loader.css">
     <link rel="apple-touch-icon" href="assets/images/germlogo.png">
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -110,38 +109,7 @@
 
     </style>
   </head>
-  <body style="background: url('/assets/images/universe.jpg');text-align: center;" onload="stopLoader()">
-    <script>
-    
-      function startLoader()
-      {
-        var loader = document.createElement("span");
-        loader.setAttribute("class", "spinner-border text-primary loader");
-        loader.setAttribute("role", "status");
-        loader.setAttribute("aria-hidden", "true");
-        loader.setAttribute("id", "loadr");
-        document.body.appendChild(loader);
-        var loaderb = document.createElement("div");
-        loaderb.setAttribute("class", "overlay");
-        loaderb.setAttribute("id", "loadrb");
-        document.body.appendChild(loaderb);
-      }
-
-      function stopLoader()
-      {
-          try
-          {
-              var element = document.getElementById("loadr");
-              element.parentNode.removeChild(element);
-              var elementb = document.getElementById("loadrb");
-              elementb.parentNode.removeChild(elementb);
-          }
-          catch (e){}
-      }
-
-      startLoader();
-
-    </script>
+  <body style="background: url('/assets/images/universe.jpg');text-align: center;">
     <h1 class="h1">PANDEMIC<br>SIMULATOR</h1>
     <div class="pwa">
       <h3>

@@ -1,7 +1,6 @@
 <html>
   <head>
     <link rel="icon" href="assets/images/germlogo.png">
-    <link rel="stylesheet" href="/assets/css/loader.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#1D1F2E">
     <meta name="apple-mobile-web-app-status-bar" content="#1D1F2E">
@@ -65,38 +64,7 @@
     </style>
     <script src="assets/js/game.js"></script>
   </head>
-  <body onload="stopLoader();createButton();" style="background: url('/assets/images/universe.jpg');">
-    <script>
-    
-      function startLoader()
-      {
-        var loader = document.createElement("span");
-        loader.setAttribute("class", "spinner-border text-primary loader");
-        loader.setAttribute("role", "status");
-        loader.setAttribute("aria-hidden", "true");
-        loader.setAttribute("id", "loadr");
-        document.body.appendChild(loader);
-        var loaderb = document.createElement("div");
-        loaderb.setAttribute("class", "overlay");
-        loaderb.setAttribute("id", "loadrb");
-        document.body.appendChild(loaderb);
-      }
-
-      function stopLoader()
-      {
-          try
-          {
-              var element = document.getElementById("loadr");
-              element.parentNode.removeChild(element);
-              var elementb = document.getElementById("loadrb");
-              elementb.parentNode.removeChild(elementb);
-          }
-          catch (e){}
-      }
-
-      startLoader();
-
-    </script>
+  <body onload="createButton();" style="background: url('/assets/images/universe.jpg');">
     <button class="button button1" onclick="re()" id="start"><b>RESTART</b></button>
     <h3 class="h1" id="stat" style="float: left; width: 50%;">Fatilities:<br>0</h3>
     <h3 class="h3" id="statx" style="float: right; width: 50%;" align="right">Infected:<br>0</h3>
