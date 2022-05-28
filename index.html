@@ -535,7 +535,7 @@
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar">
             <a class="navbar-brand" href="#home_section">
                 <img class="logo" src="assets/images/profile.png">
             </a>
@@ -1542,141 +1542,149 @@
                 document.getElementById(elem_id).style.animation = null;
             }
             
-            window.addEventListener("load", (event) => {
-                let observer = new IntersectionObserver(function(entries, observer){
-                    entries.forEach(entry => {
-                        var labelId = entry.target.id;
-                        var ir = entry.intersectionRatio;
-                        if (ir > 0.4)
+            let observer = new IntersectionObserver(function(entries, observer){
+                entries.forEach(entry => {
+                    var labelId = entry.target.id;
+                    var ir = entry.intersectionRatio;
+                    if (ir > 0.4)
+                    {
+                        if (labelId == "home_section")
                         {
-                            if (labelId == "home_section")
+                            document.getElementById("hsl").className = "nav-item active";
+                            document.getElementById("asl").className = "nav-item";
+                            document.getElementById("ssl").className = "nav-item";
+                            document.getElementById("psl").className = "nav-item";
+                            document.getElementById("acsl").className = "nav-item";
+                            document.getElementById("csl").className = "nav-item";
+                        }
+                        else if (labelId == "contact_section")
+                        {
+                            document.getElementById("hsl").className = "nav-item";
+                            document.getElementById("asl").className = "nav-item";
+                            document.getElementById("ssl").className = "nav-item";
+                            document.getElementById("psl").className = "nav-item";
+                            document.getElementById("acsl").className = "nav-item";
+                            document.getElementById("csl").className = "nav-item active";
+                            if (!contactv)
                             {
-                                document.getElementById("hsl").className = "nav-item active";
-                                document.getElementById("asl").className = "nav-item";
-                                document.getElementById("ssl").className = "nav-item";
-                                document.getElementById("psl").className = "nav-item";
-                                document.getElementById("acsl").className = "nav-item";
-                                document.getElementById("csl").className = "nav-item";
-                            }
-                            else if (labelId == "contact_section")
-                            {
-                                document.getElementById("hsl").className = "nav-item";
-                                document.getElementById("asl").className = "nav-item";
-                                document.getElementById("ssl").className = "nav-item";
-                                document.getElementById("psl").className = "nav-item";
-                                document.getElementById("acsl").className = "nav-item";
-                                document.getElementById("csl").className = "nav-item active";
-                                if (!contactv)
-                                {
-                                    contactv = true;
-                                    contactAnimationStart();
-                                }
+                                contactv = true;
+                                contactAnimationStart();
                             }
                         }
-                    });
-                },
-                {
-                    root: document.getElementById("mbody"),
-                    rootMargin: "0px",
-                    threshold: buildThresholdList()
+                    }
                 });
-
-                observer.observe(document.getElementById("home_section"));
-                observer.observe(document.getElementById("contact_section"));
-
-                let lobserver = new IntersectionObserver(function(entries, observer){
-                    entries.forEach(entry => {
-                        var labelId = entry.target.id;
-                        var ir = entry.intersectionRatio;
-                        if (ir > 0.25)
-                        {
-                            if (labelId == "about_section")
-                            {
-                                document.getElementById("hsl").className = "nav-item";
-                                document.getElementById("asl").className = "nav-item active";
-                                document.getElementById("ssl").className = "nav-item";
-                                document.getElementById("psl").className = "nav-item";
-                                document.getElementById("acsl").className = "nav-item";
-                                document.getElementById("csl").className = "nav-item";
-                                if (!aboutmev)
-                                {
-                                    aboutmev = true;
-                                    aboutMeAnimationStart();
-                                }
-                            }
-                            else if (labelId == "skills_section")
-                            {
-                                document.getElementById("hsl").className = "nav-item";
-                                document.getElementById("asl").className = "nav-item";
-                                document.getElementById("ssl").className = "nav-item active";
-                                document.getElementById("psl").className = "nav-item";
-                                document.getElementById("acsl").className = "nav-item";
-                                document.getElementById("csl").className = "nav-item";
-                                if (!tsv)
-                                {
-                                    tsv = true;
-                                    techincalAnimationStart();
-                                }
-                            }
-                        }
-                    });
-                },
-                {
-                    root: document.getElementById("mbody"),
-                    rootMargin: "0px",
-                    threshold: buildThresholdList()
-                });
-
-                lobserver.observe(document.getElementById("about_section"));
-                lobserver.observe(document.getElementById("skills_section"));
-
-                let vlobserver = new IntersectionObserver(function(entries, observer){
-                    entries.forEach(entry => {
-                        var labelId = entry.target.id;
-                        var ir = entry.intersectionRatio;
-                        if (ir > 0.05)
-                        {
-                            if (labelId == "projects_section")
-                            {
-                                document.getElementById("hsl").className = "nav-item";
-                                document.getElementById("asl").className = "nav-item";
-                                document.getElementById("ssl").className = "nav-item";
-                                document.getElementById("psl").className = "nav-item active";
-                                document.getElementById("acsl").className = "nav-item";
-                                document.getElementById("csl").className = "nav-item";
-                                if (!pv)
-                                {
-                                    pv = true;
-                                    projectsAnimationStart();
-                                }
-                            }
-                            else if (labelId == "achievements_section")
-                            {
-                                document.getElementById("hsl").className = "nav-item";
-                                document.getElementById("asl").className = "nav-item";
-                                document.getElementById("ssl").className = "nav-item";
-                                document.getElementById("psl").className = "nav-item";
-                                document.getElementById("acsl").className = "nav-item active";
-                                document.getElementById("csl").className = "nav-item";
-                                if (!achievementsv)
-                                {
-                                    achievementsv = true;
-                                    achievementsAnimationStart();
-                                }
-                            }
-                        }
-                    });
-                },
-                {
-                    root: document.getElementById("mbody"),
-                    rootMargin: "0px",
-                    threshold: buildThresholdList()
-                });
-
-                vlobserver.observe(document.getElementById("projects_section"));
-                vlobserver.observe(document.getElementById("achievements_section"));
-
+            },
+            {
+                root: document.getElementById("mbody"),
+                rootMargin: "0px",
+                threshold: buildThresholdList()
             });
+
+            observer.observe(document.getElementById("home_section"));
+            observer.observe(document.getElementById("contact_section"));
+
+            let lobserver = new IntersectionObserver(function(entries, observer){
+                entries.forEach(entry => {
+                    var labelId = entry.target.id;
+                    var ir = entry.intersectionRatio;
+                    if (ir > 0.25)
+                    {
+                        if (labelId == "about_section")
+                        {
+                            document.getElementById("hsl").className = "nav-item";
+                            document.getElementById("asl").className = "nav-item active";
+                            document.getElementById("ssl").className = "nav-item";
+                            document.getElementById("psl").className = "nav-item";
+                            document.getElementById("acsl").className = "nav-item";
+                            document.getElementById("csl").className = "nav-item";
+                            if (!aboutmev)
+                            {
+                                aboutmev = true;
+                                aboutMeAnimationStart();
+                            }
+                        }
+                        else if (labelId == "skills_section")
+                        {
+                            document.getElementById("hsl").className = "nav-item";
+                            document.getElementById("asl").className = "nav-item";
+                            document.getElementById("ssl").className = "nav-item active";
+                            document.getElementById("psl").className = "nav-item";
+                            document.getElementById("acsl").className = "nav-item";
+                            document.getElementById("csl").className = "nav-item";
+                            if (!tsv)
+                            {
+                                tsv = true;
+                                techincalAnimationStart();
+                            }
+                        }
+                    }
+                });
+            },
+            {
+                root: document.getElementById("mbody"),
+                rootMargin: "0px",
+                threshold: buildThresholdList()
+            });
+
+            lobserver.observe(document.getElementById("about_section"));
+            lobserver.observe(document.getElementById("skills_section"));
+
+            let vlobserver = new IntersectionObserver(function(entries, observer){
+                entries.forEach(entry => {
+                    var labelId = entry.target.id;
+                    var ir = entry.intersectionRatio;
+                    if (ir > 0.05)
+                    {
+                        if (labelId == "projects_section")
+                        {
+                            document.getElementById("hsl").className = "nav-item";
+                            document.getElementById("asl").className = "nav-item";
+                            document.getElementById("ssl").className = "nav-item";
+                            document.getElementById("psl").className = "nav-item active";
+                            document.getElementById("acsl").className = "nav-item";
+                            document.getElementById("csl").className = "nav-item";
+                            if (!pv)
+                            {
+                                pv = true;
+                                projectsAnimationStart();
+                            }
+                        }
+                        else if (labelId == "achievements_section")
+                        {
+                            document.getElementById("hsl").className = "nav-item";
+                            document.getElementById("asl").className = "nav-item";
+                            document.getElementById("ssl").className = "nav-item";
+                            document.getElementById("psl").className = "nav-item";
+                            document.getElementById("acsl").className = "nav-item active";
+                            document.getElementById("csl").className = "nav-item";
+                            if (!achievementsv)
+                            {
+                                achievementsv = true;
+                                achievementsAnimationStart();
+                            }
+                        }
+                    }
+                });
+            },
+            {
+                root: document.getElementById("mbody"),
+                rootMargin: "0px",
+                threshold: buildThresholdList()
+            });
+
+            vlobserver.observe(document.getElementById("projects_section"));
+            vlobserver.observe(document.getElementById("achievements_section"));
+
+            function resizeBody()
+            {
+                var bodyHeight = document.body.clientHeight;
+                var navHeight = document.getElementById("navbar").clientHeight;
+                var mbodyHeight = bodyHeight - navHeight;
+                document.getElementById("mbody").style.height = mbodyHeight + "px";
+            }
+            
+            resizeBody();
+            window.onresize = resizeBody;
 
             function typeWriter()
             {
