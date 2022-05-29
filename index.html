@@ -1686,6 +1686,18 @@
             resizeBody();
             window.onresize = resizeBody;
 
+            function removeHash()
+            {
+                history.pushState(null, null, window.location.href.split("#")[0]);
+            }
+            
+            removeHash();
+            window.addEventListener("hashchange", removeHash, false);
+
+            $(".nav-item").on("click", function(e){
+                $(".navbar-collapse").collapse("hide");
+            })
+
             function typeWriter()
             {
                 if (i < txt.length)
