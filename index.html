@@ -32,6 +32,19 @@
                 position: fixed !important;
             }
 
+            #pageLoader
+            {
+                position: fixed;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                z-index: 9999;
+                background-color: #343a40 !important;
+                height: 100%;
+                width: 100%;
+            }
+
             ::-webkit-scrollbar
             {
                 width: 10px;
@@ -241,6 +254,13 @@
             {
                 font-weight: bold;
                 font-size: 2em;
+                font-style: italic;
+            }
+
+            .subloading
+            {
+                font-weight: bold;
+                font-size: 1.6em;
                 font-style: italic;
             }
 
@@ -545,6 +565,18 @@
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <div id="pageLoader">
+            <div class="d-flex align-items-center justify-content-center" style="height: 90%; width: 100%; text-align: center;">
+                <div style="display: block; line-height: normal;">
+                    <p class="name">ABHAY TRIPATHI</p>
+                    <p class="subloading">Loading Website. Setting up a few things...</p>
+                    <br><br>
+                    <div class="spinner-border text-primary" role="status" style="height: 4rem; width: 4rem; font-size: 1.8rem;">
+                        <span class="sr-only">Loading...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar">
             <a class="navbar-brand" href="#home_section">
                 <img class="logo" src="assets/images/profile.png">
@@ -595,12 +627,12 @@
         </nav>
         <div class="main_body" id="mbody">
             <section id="home_section" style="height: 100%; background-color: rgba(0, 0, 0, 0.82);">
-                <video muted loop class="bg_video" poster="assets/images/bg.png" preload="none" id="bgVideo">
+                <video autoplay muted loop class="bg_video" poster="assets/images/bg.png">
                     <source src="assets/videos/home_bg.mp4" type="video/mp4">
                 </video>
                 <div class="d-flex align-items-center justify-content-center" style="height: 90%; width: 100%; text-align: center;">
                     <div style="display: block; line-height: normal;">
-                        <p class="name nameAnimation nameAnimationFadeInDown fadeInDown" id="title">ABHAY TRIPATHI</p>
+                        <p class="name nameAnimation nameAnimationFadeInDown fadeInDown" id="title" style="visibility: hidden;">ABHAY TRIPATHI</p>
                         <p class="subheading" id="sub_heading">&nbsp;</p>
                     </div>
                 </div>
@@ -613,7 +645,7 @@
                     <div style="display: block; width: 90%;">
                         <div class="list-group-item flex-column align-items-center" style="background-color: #18181a; margin-top: 2%;">
                             <div class="card-deck" style="justify-content: left;">
-                                <img class="img-fluid limg textAnimation textFadeInLeft fadeInLeft" src="assets/images/profile.png" id="profile_pic" style="visibility: hidden;" loading="lazy">
+                                <img class="img-fluid limg textAnimation textFadeInLeft fadeInLeft" src="assets/images/profile.png" id="profile_pic" style="visibility: hidden;">
                                 <div class="ldiv">
                                     <div class="container">
                                         <h1 class="card-title aboutMe textAnimation textFadeInRight fadeInRight" id="about_me" style="visibility: hidden;">About Me</h1>
@@ -623,7 +655,7 @@
                                                 <b style="border-bottom: 1px white solid; display:inline-table; padding-bottom: 2px; border-top: 1px white solid; padding-top: 2px;">My Educational Qualification</b>
                                                 <br>
                                                 <a href="https://google.com/search?q=Manipal+University+Jaipur" target="_blank">
-                                                    <img class="img-fluid muj" src="assets/images/logos/muj.png" loading="lazy">
+                                                    <img class="img-fluid muj" src="assets/images/logos/muj.png">
                                                 </a>
                                                 <br>
                                                 I am currently a <b>First Year Student of B.Tech Computer Science and Engineering at Manipal University Jaipur</b>. I will graduate in the year 2025.
@@ -652,25 +684,25 @@
                     <b class="justify-content-left textAnimation textFadeInRight fadeInLeft" style="border-bottom: 1px white solid; display:inline-table; padding-bottom: 2px; margin-top: 16px; margin-left: 20px; border-top: 1px white solid; padding-top: 2px; margin-bottom: 8px;" id="tsh1">Native App Development and Software Engineering (Programming Languages)</b>
                     <div class="d-flex align-items-start justify-content-start textAnimation textFadeInLeft fadeInLeft" style="text-align: center; padding-left: 20px; flex-wrap: wrap;" id="tsb1">
                         <div style="display: inline-flex; align-items: center; margin-top: 20px; margin-right: 15px;">
-                            <img src="assets/images/logos/java.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; padding: 2px;" loading="lazy">
+                            <img src="assets/images/logos/java.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; padding: 2px;">
                             <div style="display: inline-flex; margin-left: 12px;">
                                 <b>Java</b>
                             </div>
                         </div>
                         <div style="display: inline-flex; align-items: center; margin-top: 10px; margin-right: 15px;">
-                            <img src="assets/images/logos/android.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; padding: 2px;" loading="lazy">
+                            <img src="assets/images/logos/android.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; padding: 2px;">
                             <div style="display: inline-flex; margin-left: 12px; text-align: left;">
                                 <b>Android App Development<br>(Android Java SDK and XML)</b>
                             </div>
                         </div>
                         <div style="display: inline-flex; align-items: center; margin-top: 20px; margin-right: 15px;">
-                            <img src="assets/images/logos/python.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; padding: 2px;" loading="lazy">
+                            <img src="assets/images/logos/python.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; padding: 2px;">
                             <div style="display: inline-flex; margin-left: 12px;">
                                 <b>Python</b>
                             </div>
                         </div>
                         <div style="display: inline-flex; align-items: center; margin-top: 20px; margin-right: 15px;">
-                            <img src="assets/images/logos/c.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; padding: 2px;" loading="lazy">
+                            <img src="assets/images/logos/c.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; padding: 2px;">
                             <div style="display: inline-flex; margin-left: 12px;">
                                 <b>C Programming</b>
                             </div>
@@ -679,19 +711,19 @@
                     <b class="justify-content-left textAnimation textFadeInLeft fadeInLeft" style="border-bottom: 1px white solid; display:inline-table; padding-bottom: 2px; margin-top: 20px; margin-left: 20px; border-top: 1px white solid; padding-top: 2px; margin-bottom: 8px;" id="tsh2">Production Environments</b>
                     <div class="d-flex align-items-start justify-content-start textAnimation textFadeInLeft fadeInLeft" style="text-align: center; padding-left: 20px; flex-wrap: wrap;" id="tsb2">
                         <div style="display: inline-flex; align-items: center; margin-top: 20px; margin-right: 15px;">
-                            <img src="assets/images/logos/linux.svg" height="30px" width="30px" style="display: inline-flex; border-radius: 8px !important; background-color: white; padding: 2px;" loading="lazy">
+                            <img src="assets/images/logos/linux.svg" height="30px" width="30px" style="display: inline-flex; border-radius: 8px !important; background-color: white; padding: 2px;">
                             <div style="display: inline-flex; margin-left: 12px;">
                                 <b>Linux</b>
                             </div>
                         </div>
                         <div style="display: inline-flex; align-items: center; margin-top: 20px; margin-right: 15px;">
-                            <img src="assets/images/logos/windows.png" height="30px" width="30px" style="display: inline-flex; border-radius: 8px !important; background-color: white; padding: 2px;" loading="lazy">
+                            <img src="assets/images/logos/windows.png" height="30px" width="30px" style="display: inline-flex; border-radius: 8px !important; background-color: white; padding: 2px;">
                             <div style="display: inline-flex; margin-left: 12px;">
                                 <b>Microsoft Windows</b>
                             </div>
                         </div>
                         <div style="display: inline-flex; align-items: center; margin-top: 20px; margin-right: 15px;">
-                            <img src="assets/images/logos/apple.svg" height="30px" width="30px" style="display: inline-flex; border-radius: 8px !important; background-color: white; padding: 2px;" loading="lazy">
+                            <img src="assets/images/logos/apple.svg" height="30px" width="30px" style="display: inline-flex; border-radius: 8px !important; background-color: white; padding: 2px;">
                             <div style="display: inline-flex; margin-left: 12px;">
                                 <b>Apple Macbook and iMac</b>
                             </div>
@@ -700,79 +732,79 @@
                     <b class="justify-content-left textAnimation textFadeInLeft fadeInLeft" style="border-bottom: 1px white solid; display:inline-table; padding-bottom: 2px; margin-top: 20px; margin-left: 20px; border-top: 1px white solid; padding-top: 2px; margin-bottom: 8px;" id="tsh3">Web Development</b>
                     <div class="d-flex align-items-start justify-content-start textAnimation textFadeInLeft fadeInLeft" style="text-align: center; padding-left: 20px; flex-wrap: wrap;" id="tsb3">
                         <div style="display: inline-flex; align-items: center; margin-top: 20px; margin-right: 15px;">
-                            <img src="assets/images/logos/html.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; padding: 2px;" loading="lazy">
+                            <img src="assets/images/logos/html.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; padding: 2px;">
                             <div style="display: inline-flex; margin-left: 12px;">
                                 <b>HTML</b>
                             </div>
                         </div>
                         <div style="display: inline-flex; align-items: center; margin-top: 20px; margin-right: 15px;">
-                            <img src="assets/images/logos/css.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; padding: 2px;" loading="lazy">
+                            <img src="assets/images/logos/css.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; padding: 2px;">
                             <div style="display: inline-flex; margin-left: 12px;">
                                 <b>CSS</b>
                             </div>
                         </div>
                         <div style="display: inline-flex; align-items: center; margin-top: 20px; margin-right: 15px;">
-                            <img src="assets/images/logos/js.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; padding: 2px;" loading="lazy">
+                            <img src="assets/images/logos/js.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; padding: 2px;">
                             <div style="display: inline-flex; margin-left: 12px;">
                                 <b>JavaScript</b>
                             </div>
                         </div>
                         <div style="display: inline-flex; align-items: center; margin-top: 20px; margin-right: 15px;">
-                            <img src="assets/images/logos/jquery.png" height="30px" width="30px" style="display: inline-flex; border-radius: 8px !important; background-color: white; padding: 2px;" loading="lazy">
+                            <img src="assets/images/logos/jquery.png" height="30px" width="30px" style="display: inline-flex; border-radius: 8px !important; background-color: white; padding: 2px;">
                             <div style="display: inline-flex; margin-left: 12px;">
                                 <b>JQuery</b>
                             </div>
                         </div>
                         <div style="display: inline-flex; align-items: center; margin-top: 20px; margin-right: 15px;">
-                            <img src="assets/images/logos/bootstrap.png" height="30px" width="30px" style="display: inline-flex;" loading="lazy">
+                            <img src="assets/images/logos/bootstrap.png" height="30px" width="30px" style="display: inline-flex;">
                             <div style="display: inline-flex; margin-left: 12px;">
                                 <b>Bootstrap Framework</b>
                             </div>
                         </div>
                         <div style="display: inline-flex; align-items: center; margin-top: 20px; margin-right: 15px;">
-                            <img src="assets/images/logos/pwa.png" height="30px" width="30px" style="display: inline-flex;" loading="lazy">
+                            <img src="assets/images/logos/pwa.png" height="30px" width="30px" style="display: inline-flex;">
                             <div style="display: inline-flex; margin-left: 12px;">
                                 <b>Progressive Web Apps (PWAs)</b>
                             </div>
                         </div>
                         <div style="display: inline-flex; align-items: center; margin-top: 20px; margin-right: 15px;">
-                            <img src="assets/images/logos/rest.png" height="30px" width="30px" style="display: inline-flex;" loading="lazy">
+                            <img src="assets/images/logos/rest.png" height="30px" width="30px" style="display: inline-flex;">
                             <div style="display: inline-flex; margin-left: 12px;">
                                 <b>REST APIs</b>
                             </div>
                         </div>
                         <div style="display: inline-flex; align-items: center; margin-top: 20px; margin-right: 15px;">
-                            <img src="assets/images/logos/flask.svg" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; padding: 2px;" loading="lazy">
+                            <img src="assets/images/logos/flask.svg" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; padding: 2px;">
                             <div style="display: inline-flex; margin-left: 12px;">
                                 <b>Flask Web Framework</b>
                             </div>
                         </div>
                         <div style="display: inline-flex; align-items: center; margin-top: 20px; margin-right: 15px;">
-                            <img src="assets/images/logos/php.png" height="30px" width="30px" style="display: inline-flex;" loading="lazy">
+                            <img src="assets/images/logos/php.png" height="30px" width="30px" style="display: inline-flex;">
                             <div style="display: inline-flex; margin-left: 12px;">
                                 <b>PHP</b>
                             </div>
                         </div>
                         <div style="display: inline-flex; align-items: center; margin-top: 20px; margin-right: 15px;">
-                            <img src="assets/images/logos/ws.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; padding: 2px;" loading="lazy">
+                            <img src="assets/images/logos/ws.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; padding: 2px;">
                             <div style="display: inline-flex; margin-left: 12px;">
                                 <b>Web Socket Server</b>
                             </div>
                         </div>
                         <div style="display: inline-flex; align-items: center; margin-top: 20px; margin-right: 15px;">
-                            <img src="assets/images/logos/apache.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; padding: 2px;" loading="lazy">
+                            <img src="assets/images/logos/apache.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; padding: 2px;">
                             <div style="display: inline-flex; margin-left: 12px;">
                                 <b>Apache Web Server</b>
                             </div>
                         </div>
                         <div style="display: inline-flex; align-items: center; margin-top: 20px; margin-right: 15px;">
-                            <img src="assets/images/logos/nginx.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; padding: 2px;" loading="lazy">
+                            <img src="assets/images/logos/nginx.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; padding: 2px;">
                             <div style="display: inline-flex; margin-left: 12px;">
                                 <b>NGINX Web Server</b>
                             </div>
                         </div>
                         <div style="display: inline-flex; align-items: center; margin-top: 20px; margin-right: 15px;">
-                            <img src="assets/images/logos/cgi.png" height="30px" width="30px" style="display: inline-flex; border-radius: 8px !important; background-color: white; padding: 2px;" loading="lazy">
+                            <img src="assets/images/logos/cgi.png" height="30px" width="30px" style="display: inline-flex; border-radius: 8px !important; background-color: white; padding: 2px;">
                             <div style="display: inline-flex; margin-left: 12px;">
                                 <b>CGI Programming</b>
                             </div>
@@ -781,25 +813,25 @@
                     <b class="justify-content-left textAnimation textFadeInLeft fadeInLeft" style="border-bottom: 1px white solid; display:inline-table; padding-bottom: 2px; margin-top: 20px; margin-left: 20px; border-top: 1px white solid; padding-top: 2px; margin-bottom: 8px;" id="tsh4">Cross-Platform User Interface (UI)</b>
                     <div class="d-flex align-items-start justify-content-start textAnimation textFadeInLeft fadeInLeft" style="text-align: center; padding-left: 20px; flex-wrap: wrap;" id="tsb4">
                         <div style="display: inline-flex; align-items: center; margin-top: 20px; margin-right: 15px;">
-                            <img src="assets/images/logos/java.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; padding: 2px;" loading="lazy">
+                            <img src="assets/images/logos/java.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; padding: 2px;">
                             <div style="display: inline-flex; margin-left: 12px;">
                                 <b>JavaFX Swing Framework</b>
                             </div>
                         </div>
                         <div style="display: inline-flex; align-items: center; margin-top: 20px; margin-right: 15px;">
-                            <img src="assets/images/logos/tkinter.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; padding: 2px;" loading="lazy">
+                            <img src="assets/images/logos/tkinter.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; padding: 2px;">
                             <div style="display: inline-flex; margin-left: 12px;">
                                 <b>Python TKinter Framework</b>
                             </div>
                         </div>
                         <div style="display: inline-flex; align-items: center; margin-top: 9px; margin-right: 15px;">
-                            <img src="assets/images/logos/windows.png" height="30px" width="30px" style="display: inline-flex; border-radius: 8px !important; background-color: white; padding: 2px;" loading="lazy">
+                            <img src="assets/images/logos/windows.png" height="30px" width="30px" style="display: inline-flex; border-radius: 8px !important; background-color: white; padding: 2px;">
                             <div style="display: inline-flex; margin-left: 12px; text-align: left;">
                                 <b>C/C++ Win32 API<br>(Only for Windows)</b>
                             </div>
                         </div>
                         <div style="display: inline-flex; align-items: center; margin-top: 20px; margin-right: 15px;">
-                            <img src="assets/images/logos/pygame.png" height="30px" width="30px" style="display: inline-flex; border-radius: 8px !important; background-color: white; padding: 2px;" loading="lazy">
+                            <img src="assets/images/logos/pygame.png" height="30px" width="30px" style="display: inline-flex; border-radius: 8px !important; background-color: white; padding: 2px;">
                             <div style="display: inline-flex; margin-left: 12px;">
                                 <b>Python PyGame Framework</b>
                             </div>
@@ -808,7 +840,7 @@
                     <b class="justify-content-left textAnimation textFadeInLeft fadeInLeft" style="border-bottom: 1px white solid; display:inline-table; padding-bottom: 2px; margin-top: 20px; margin-left: 20px; border-top: 1px white solid; padding-top: 2px; margin-bottom: 8px;" id="tsh5">Network Programming</b>
                     <div class="d-flex align-items-start justify-content-start textAnimation textFadeInLeft fadeInLeft" style="text-align: center; padding-left: 20px; flex-wrap: wrap;" id="tsb5">
                         <div style="display: inline-flex; align-items: center; margin-top: 20px; margin-right: 15px;">
-                            <img src="assets/images/logos/tcp.png" height="30px" width="30px" style="display: inline-flex; border-radius: 8px !important; background-color: white; padding: 2px;" loading="lazy">
+                            <img src="assets/images/logos/tcp.png" height="30px" width="30px" style="display: inline-flex; border-radius: 8px !important; background-color: white; padding: 2px;">
                             <div style="display: inline-flex; margin-left: 12px;">
                                 <b>TCP Sockets Programming</b>
                             </div>
@@ -817,7 +849,7 @@
                     <b class="justify-content-left textAnimation textFadeInLeft fadeInLeft" style="border-bottom: 1px white solid; display:inline-table; padding-bottom: 2px; margin-top: 20px; margin-left: 20px; border-top: 1px white solid; padding-top: 2px; margin-bottom: 8px;" id="tsh6">Cloud Database</b>
                     <div class="d-flex align-items-start justify-content-start textAnimation textFadeInLeft fadeInLeft" style="text-align: center; padding-left: 20px; flex-wrap: wrap;" id="tsb6">
                         <div style="display: inline-flex; align-items: center; margin-top: 20px; margin-right: 15px;">
-                            <img src="assets/images/logos/firebase.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; padding: 2px;" loading="lazy">
+                            <img src="assets/images/logos/firebase.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; padding: 2px;">
                             <div style="display: inline-flex; margin-left: 12px;">
                                 <b>Firebase Realtime Database</b>
                             </div>
@@ -826,13 +858,13 @@
                     <b class="justify-content-left textAnimation textFadeInLeft fadeInLeft" style="border-bottom: 1px white solid; display:inline-table; padding-bottom: 2px; margin-top: 20px; margin-left: 20px; border-top: 1px white solid; padding-top: 2px; margin-bottom: 8px;" id="tsh7">SQL Database</b>
                     <div class="d-flex align-items-start justify-content-start textAnimation textFadeInLeft fadeInLeft" style="text-align: center; padding-left: 20px; flex-wrap: wrap;" id="tsb7">
                         <div style="display: inline-flex; align-items: center; margin-top: 20px; margin-right: 15px;">
-                            <img src="assets/images/logos/mysql.png" height="30px" width="30px" style="display: inline-flex; border-radius: 8px !important; background-color: white; padding: 2px;" loading="lazy">
+                            <img src="assets/images/logos/mysql.png" height="30px" width="30px" style="display: inline-flex; border-radius: 8px !important; background-color: white; padding: 2px;">
                             <div style="display: inline-flex; margin-left: 12px;">
                                 <b>MySQL</b>
                             </div>
                         </div>
                         <div style="display: inline-flex; align-items: center; margin-top: 20px; margin-right: 15px;">
-                            <img src="assets/images/logos/mariadb.png" height="30px" width="30px" style="display: inline-flex; border-radius: 8px !important; background-color: white; padding: 2px;" loading="lazy">
+                            <img src="assets/images/logos/mariadb.png" height="30px" width="30px" style="display: inline-flex; border-radius: 8px !important; background-color: white; padding: 2px;">
                             <div style="display: inline-flex; margin-left: 12px;">
                                 <b>MariaDB</b>
                             </div>
@@ -841,7 +873,7 @@
                     <b class="justify-content-left textAnimation textFadeInLeft fadeInLeft" style="border-bottom: 1px white solid; display:inline-table; padding-bottom: 2px; margin-top: 20px; margin-left: 20px; border-top: 1px white solid; padding-top: 2px; margin-bottom: 8px;" id="tsh8">NoSQL Database</b>
                     <div class="d-flex align-items-start justify-content-start textAnimation textFadeInLeft fadeInLeft" style="text-align: center; padding-left: 20px; flex-wrap: wrap;" id="tsb8">
                         <div style="display: inline-flex; align-items: center; margin-top: 20px; margin-right: 15px;">
-                            <img src="assets/images/logos/mongodb.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; padding: 2px;" loading="lazy">
+                            <img src="assets/images/logos/mongodb.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; padding: 2px;">
                             <div style="display: inline-flex; margin-left: 12px;">
                                 <b>MongoDB</b>
                             </div>
@@ -850,7 +882,7 @@
                     <b class="justify-content-left textAnimation textFadeInLeft fadeInLeft" style="border-bottom: 1px white solid; display:inline-table; padding-bottom: 2px; margin-top: 20px; margin-left: 20px; border-top: 1px white solid; padding-top: 2px; margin-bottom: 8px;" id="tsh9">Cloud Computing</b>
                     <div class="d-flex align-items-start justify-content-start textAnimation textFadeInLeft fadeInLeft" style="text-align: center; padding-left: 20px; flex-wrap: wrap;" id="tsb9">
                         <div style="display: inline-flex; align-items: center; margin-top: 20px; margin-right: 15px;">
-                            <img src="assets/images/logos/aws.png" height="30px" width="30px" style="display: inline-flex; border-radius: 8px !important; background-color: white;" loading="lazy">
+                            <img src="assets/images/logos/aws.png" height="30px" width="30px" style="display: inline-flex; border-radius: 8px !important; background-color: white;">
                             <div style="display: inline-flex; margin-left: 12px;">
                                 <b style="text-align: left;">Amazon Web Services (AWS) EC2 Instance Hosting and Management</b>
                             </div>
@@ -873,13 +905,13 @@
                         <div class="col-md-4">
                             <div class="work-box">
                                 <div class="work-img">
-                                    <img src="assets/images/projects/livefunds.jpg" alt="" class="img-fluid" loading="lazy">
+                                    <img src="assets/images/projects/livefunds.jpg" alt="" class="img-fluid">
                                 </div>
                                 <div class="work-content">
                                     <div class="row">
                                         <div class="col">
                                             <div style="display: inline-flex; align-items: center; margin-right: 15px; margin-bottom: 10px;">
-                                                <img src="assets/images/logos/livefunds.png" height="30px" width="30px" style="display: inline-flex; border-radius: 8px !important; transform: none;" loading="lazy">
+                                                <img src="assets/images/logos/livefunds.png" height="30px" width="30px" style="display: inline-flex; border-radius: 8px !important; transform: none;">
                                                 <div style="display: inline-flex; margin-left: 12px;">
                                                     <b class="w-title">LiveFunds</b>
                                                 </div>
@@ -898,7 +930,7 @@
                             <div class="work-box">
                                 <div class="work-img">
                                     <a href="digifriend" target="_blank">
-                                        <img src="assets/images/projects/digifriend.webp" alt="" class="img-fluid" loading="lazy">
+                                        <img src="assets/images/projects/digifriend.webp" alt="" class="img-fluid">
                                     </a>
                                 </div>
                                 <div class="work-content">
@@ -906,7 +938,7 @@
                                         <div class="col">
                                             <a href="digifriend" target="_blank">
                                                 <div style="display: inline-flex; align-items: center; margin-right: 15px; margin-bottom: 10px;">
-                                                    <img src="assets/images/logos/digifriend.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; transform: none;" loading="lazy">
+                                                    <img src="assets/images/logos/digifriend.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; transform: none;">
                                                     <div style="display: inline-flex; margin-left: 12px;">
                                                         <b class="w-title">DigiFriend</b>
                                                     </div>
@@ -927,7 +959,7 @@
                             <div class="work-box">
                                 <div class="work-img">
                                     <a href="https://queuescan.com" target="_blank">
-                                        <img src="assets/images/projects/queuescan.jpg" alt="" class="img-fluid" loading="lazy">
+                                        <img src="assets/images/projects/queuescan.jpg" alt="" class="img-fluid">
                                     </a>
                                 </div>
                                 <div class="work-content">
@@ -935,7 +967,7 @@
                                         <div class="col">
                                             <a href="https://queuescan.com" target="_blank">
                                                 <div style="display: inline-flex; align-items: center; margin-right: 15px; margin-bottom: 10px;">
-                                                    <img src="assets/images/logos/queuescan.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; transform: none;" loading="lazy">
+                                                    <img src="assets/images/logos/queuescan.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; transform: none;">
                                                     <div style="display: inline-flex; margin-left: 12px;">
                                                         <b class="w-title">QueueScan</b>
                                                     </div>
@@ -963,7 +995,7 @@
                             <div class="work-box">
                                 <div class="work-img">
                                     <a href="https://github.com/AbhayTr/CString" target="_blank">
-                                        <img src="assets/images/projects/coding.jpg" alt="" class="img-fluid" loading="lazy">
+                                        <img src="assets/images/projects/coding.jpg" alt="" class="img-fluid">
                                     </a>
                                 </div>
                                 <div class="work-content">
@@ -971,7 +1003,7 @@
                                         <div class="col">
                                             <a href="https://github.com/AbhayTr/CString" target="_blank">
                                                 <div style="display: inline-flex; align-items: center; margin-right: 15px; margin-bottom: 10px;">
-                                                    <img src="assets/images/logos/c.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; transform: none; padding: 2px;" loading="lazy">
+                                                    <img src="assets/images/logos/c.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; transform: none; padding: 2px;">
                                                     <div style="display: inline-flex; margin-left: 12px;">
                                                         <b class="w-title">CString</b>
                                                     </div>
@@ -990,20 +1022,20 @@
                         <div class="col-md-4">
                             <div class="work-box">
                                 <div class="work-img">
-                                    <img src="assets/images/projects/beauty.gif" alt="" class="img-fluid" loading="lazy">
+                                    <img src="assets/images/projects/beauty.gif" alt="" class="img-fluid">
                                 </div>
                                 <div class="work-content">
                                     <div class="row">
                                         <div class="col">
                                             <div style="display: inline-flex; align-items: center; margin-right: 15px; margin-bottom: 10px;">
                                                 <a href="https://github.com/AbhayTr/JBeauty" target="_blank">
-                                                    <img src="assets/images/logos/java.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; transform: none; padding: 2px;" loading="lazy">
+                                                    <img src="assets/images/logos/java.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; transform: none; padding: 2px;">
                                                 </a>
                                                 <a href="https://pypi.org/project/pybeauty" target="_blank">
-                                                    <img src="assets/images/logos/python.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; transform: none; margin-left: 12px; padding: 2px;" loading="lazy">
+                                                    <img src="assets/images/logos/python.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; transform: none; margin-left: 12px; padding: 2px;">
                                                 </a>
                                                 <a href="https://github.com/AbhayTr/BeautyJS" target="_blank">
-                                                    <img src="assets/images/logos/js.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; transform: none; margin-left: 12px; padding: 2px;" loading="lazy">
+                                                    <img src="assets/images/logos/js.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; transform: none; margin-left: 12px; padding: 2px;">
                                                 </a>
                                                 <div style="display: inline-flex; margin-left: 12px;">
                                                     <b class="w-title">Beauty</b>
@@ -1028,7 +1060,7 @@
                             <div class="work-box">
                                 <div class="work-img">
                                     <a href="multicrypt" target="_blank">
-                                        <img src="assets/images/projects/multicrypt.jpg" alt="" class="img-fluid" loading="lazy">
+                                        <img src="assets/images/projects/multicrypt.jpg" alt="" class="img-fluid">
                                     </a>
                                 </div>
                                 <div class="work-content">
@@ -1036,13 +1068,13 @@
                                         <div class="col">
                                             <div style="display: inline-flex; align-items: center; margin-right: 15px; margin-bottom: 10px;">
                                                 <a href="https://github.com/AbhayTr/JMulticrypt" target="_blank">
-                                                    <img src="assets/images/logos/java.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; transform: none; padding: 2px;" loading="lazy">
+                                                    <img src="assets/images/logos/java.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; transform: none; padding: 2px;">
                                                 </a>
                                                 <a href="https://pypi.org/project/pymulticrypt" target="_blank">
-                                                    <img src="assets/images/logos/python.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; transform: none; margin-left: 12px; padding: 2px;" loading="lazy">
+                                                    <img src="assets/images/logos/python.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; transform: none; margin-left: 12px; padding: 2px;">
                                                 </a>
                                                 <a href="https://github.com/AbhayTr/MulticryptJS" target="_blank">
-                                                    <img src="assets/images/logos/js.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; transform: none; margin-left: 12px; padding: 2px;" loading="lazy">
+                                                    <img src="assets/images/logos/js.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; transform: none; margin-left: 12px; padding: 2px;">
                                                 </a>
                                                 <div style="display: inline-flex; margin-left: 12px;">
                                                     <b class="w-title"><a href="multicrypt" target="_blank">Multicrypt</a></b>
@@ -1069,7 +1101,7 @@
                             <div class="work-box">
                                 <div class="work-img">
                                     <a href="https://pypi.org/project/pyfractals" target="_blank">
-                                        <img src="assets/images/projects/pyfractals.jpg" alt="" class="img-fluid" loading="lazy">
+                                        <img src="assets/images/projects/pyfractals.jpg" alt="" class="img-fluid">
                                     </a>
                                 </div>
                                 <div class="work-content">
@@ -1077,7 +1109,7 @@
                                         <div class="col">
                                             <a href="https://pypi.org/project/pyfractals" target="_blank">
                                                 <div style="display: inline-flex; align-items: center; margin-right: 15px; margin-bottom: 10px;">
-                                                    <img src="assets/images/logos/python.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; transform: none; padding: 2px;" loading="lazy">
+                                                    <img src="assets/images/logos/python.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; transform: none; padding: 2px;">
                                                     <div style="display: inline-flex; margin-left: 12px;">
                                                         <b class="w-title">PyFractals</b>
                                                     </div>
@@ -1097,7 +1129,7 @@
                             <div class="work-box">
                                 <div class="work-img">
                                     <a href="https://pypi.org/project/consolebar" target="_blank">
-                                        <img src="assets/images/projects/consolebar.png" alt="" class="img-fluid" loading="lazy">
+                                        <img src="assets/images/projects/consolebar.png" alt="" class="img-fluid">
                                     </a>
                                 </div>
                                 <div class="work-content">
@@ -1105,7 +1137,7 @@
                                         <div class="col">
                                             <a href="https://pypi.org/project/consolebar" target="_blank">
                                                 <div style="display: inline-flex; align-items: center; margin-right: 15px; margin-bottom: 10px;">
-                                                    <img src="assets/images/logos/python.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; transform: none; padding: 2px;" loading="lazy">
+                                                    <img src="assets/images/logos/python.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; transform: none; padding: 2px;">
                                                     <div style="display: inline-flex; margin-left: 12px;">
                                                         <b class="w-title">ConsoleBar</b>
                                                     </div>
@@ -1131,7 +1163,7 @@
                             <div class="work-box">
                                 <div class="work-img">
                                     <a href="pandemic-simulator" target="_blank">
-                                        <img src="assets/images/projects/ps.jpg" alt="" class="img-fluid" loading="lazy">
+                                        <img src="assets/images/projects/ps.jpg" alt="" class="img-fluid">
                                     </a>
                                 </div>
                                 <div class="work-content">
@@ -1139,7 +1171,7 @@
                                         <div class="col">
                                             <a href="pandemic-simulator" target="_blank">
                                                 <div style="display: inline-flex; align-items: center; margin-right: 15px; margin-bottom: 10px;">
-                                                    <img src="assets/images/logos/ps.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; transform: none; padding: 2px;" loading="lazy">
+                                                    <img src="assets/images/logos/ps.png" height="30px" width="30px" style="display: inline-flex; border-radius: 50% !important; background-color: white; transform: none; padding: 2px;">
                                                     <div style="display: inline-flex; margin-left: 12px;">
                                                         <b class="w-title">Pandemic Simulator</b>
                                                     </div>
@@ -1172,14 +1204,14 @@
                     <div class="col-md-4">
                         <div class="work-box">
                             <div class="work-img">
-                                <img src="assets/images/certificates/psi.png" alt="" class="img-fluid" style="transform: none;" loading="lazy">
+                                <img src="assets/images/certificates/psi.png" alt="" class="img-fluid" style="transform: none;">
                             </div>
                             <div class="work-content">
                                 <div class="row">
                                     <div class="col">
                                         <a href="https://www.hackerrank.com/certificates/7d9b78882302" style="font-weight: bold;" target="_blank">
                                             <div style="display: inline-flex; align-items: center; margin-right: 15px; margin-bottom: 10px;">
-                                                <img src="assets/images/logos/hackerrank.png" height="30px" width="30px" style="display: inline-flex; border-radius: 8px !important; background-color: white; transform: none;" loading="lazy">
+                                                <img src="assets/images/logos/hackerrank.png" height="30px" width="30px" style="display: inline-flex; border-radius: 8px !important; background-color: white; transform: none;">
                                                 <div style="display: inline-flex; margin-left: 12px;">
                                                     <b class="w-title">Problem Solving (Intermediate)</b>
                                                 </div>
@@ -1196,14 +1228,14 @@
                     <div class="col-md-4">
                         <div class="work-box">
                             <div class="work-img">
-                                <img src="assets/images/certificates/psb.png" alt="" class="img-fluid" style="transform: none;" loading="lazy">
+                                <img src="assets/images/certificates/psb.png" alt="" class="img-fluid" style="transform: none;">
                             </div>
                             <div class="work-content">
                                 <div class="row">
                                     <div class="col">
                                         <a href="https://www.hackerrank.com/certificates/7917ee54a919" style="font-weight: bold;" target="_blank">
                                             <div style="display: inline-flex; align-items: center; margin-right: 15px; margin-bottom: 10px;">
-                                                <img src="assets/images/logos/hackerrank.png" height="30px" width="30px" style="display: inline-flex; border-radius: 8px !important; background-color: white; transform: none;" loading="lazy">
+                                                <img src="assets/images/logos/hackerrank.png" height="30px" width="30px" style="display: inline-flex; border-radius: 8px !important; background-color: white; transform: none;">
                                                 <div style="display: inline-flex; margin-left: 12px;">
                                                     <b class="w-title">Problem Solving (Basic)</b>
                                                 </div>
@@ -1220,14 +1252,14 @@
                     <div class="col-md-4">
                         <div class="work-box">
                             <div class="work-img">
-                                <img src="assets/images/certificates/java.png" alt="" class="img-fluid" style="transform: none;" loading="lazy">
+                                <img src="assets/images/certificates/java.png" alt="" class="img-fluid" style="transform: none;">
                             </div>
                             <div class="work-content">
                                 <div class="row">
                                     <div class="col">
                                         <a href="https://www.hackerrank.com/certificates/b0c490a9f73e" style="font-weight: bold;" target="_blank">
                                             <div style="display: inline-flex; align-items: center; margin-right: 15px; margin-bottom: 10px;">
-                                                <img src="assets/images/logos/hackerrank.png" height="30px" width="30px" style="display: inline-flex; border-radius: 8px !important; background-color: white; transform: none;" loading="lazy">
+                                                <img src="assets/images/logos/hackerrank.png" height="30px" width="30px" style="display: inline-flex; border-radius: 8px !important; background-color: white; transform: none;">
                                                 <div style="display: inline-flex; margin-left: 12px;">
                                                     <b class="w-title">Java Technology</b>
                                                 </div>
@@ -1244,14 +1276,14 @@
                     <div class="col-md-4">
                         <div class="work-box">
                             <div class="work-img">
-                                <img src="assets/images/certificates/python.png" alt="" class="img-fluid" style="transform: none;" loading="lazy">
+                                <img src="assets/images/certificates/python.png" alt="" class="img-fluid" style="transform: none;">
                             </div>
                             <div class="work-content">
                                 <div class="row">
                                     <div class="col">
                                         <a href="https://www.hackerrank.com/certificates/f09e36591114" style="font-weight: bold;" target="_blank">
                                             <div style="display: inline-flex; align-items: center; margin-right: 15px; margin-bottom: 10px;">
-                                                <img src="assets/images/logos/hackerrank.png" height="30px" width="30px" style="display: inline-flex; border-radius: 8px !important; background-color: white; transform: none;" loading="lazy">
+                                                <img src="assets/images/logos/hackerrank.png" height="30px" width="30px" style="display: inline-flex; border-radius: 8px !important; background-color: white; transform: none;">
                                                 <div style="display: inline-flex; margin-left: 12px;">
                                                     <b class="w-title">Python Technology</b>
                                                 </div>
@@ -1268,14 +1300,14 @@
                     <div class="col-md-4">
                         <div class="work-box">
                             <div class="work-img">
-                                <img src="assets/images/certificates/sql.png" alt="" class="img-fluid" style="transform: none;" loading="lazy">
+                                <img src="assets/images/certificates/sql.png" alt="" class="img-fluid" style="transform: none;">
                             </div>
                             <div class="work-content">
                                 <div class="row">
                                     <div class="col">
                                         <a href="https://www.hackerrank.com/certificates/a6bdc1fbd84b" style="font-weight: bold;" target="_blank">
                                             <div style="display: inline-flex; align-items: center; margin-right: 15px; margin-bottom: 10px;">
-                                                <img src="assets/images/logos/hackerrank.png" height="30px" width="30px" style="display: inline-flex; border-radius: 8px !important; background-color: white; transform: none;" loading="lazy">
+                                                <img src="assets/images/logos/hackerrank.png" height="30px" width="30px" style="display: inline-flex; border-radius: 8px !important; background-color: white; transform: none;">
                                                 <div style="display: inline-flex; margin-left: 12px;">
                                                     <b class="w-title">SQL Technology</b>
                                                 </div>
@@ -1292,14 +1324,14 @@
                     <div class="col-md-4">
                         <div class="work-box">
                             <div class="work-img">
-                                <img src="assets/images/certificates/js.png" alt="" class="img-fluid" style="transform: none;" loading="lazy">
+                                <img src="assets/images/certificates/js.png" alt="" class="img-fluid" style="transform: none;">
                             </div>
                             <div class="work-content">
                                 <div class="row">
                                     <div class="col">
                                         <a href="https://www.hackerrank.com/certificates/a459b5ad7249" style="font-weight: bold;" target="_blank">
                                             <div style="display: inline-flex; align-items: center; margin-right: 15px; margin-bottom: 10px;">
-                                                <img src="assets/images/logos/hackerrank.png" height="30px" width="30px" style="display: inline-flex; border-radius: 8px !important; background-color: white; transform: none;" loading="lazy">
+                                                <img src="assets/images/logos/hackerrank.png" height="30px" width="30px" style="display: inline-flex; border-radius: 8px !important; background-color: white; transform: none;">
                                                 <div style="display: inline-flex; margin-left: 12px;">
                                                     <b class="w-title">JavaScript Technology</b>
                                                 </div>
@@ -1316,14 +1348,14 @@
                     <div class="col-md-4">
                         <div class="work-box">
                             <div class="work-img">
-                                <img src="assets/images/certificates/rest.png" alt="" class="img-fluid" style="transform: none;" loading="lazy">
+                                <img src="assets/images/certificates/rest.png" alt="" class="img-fluid" style="transform: none;">
                             </div>
                             <div class="work-content">
                                 <div class="row">
                                     <div class="col">
                                         <a href="https://www.hackerrank.com/certificates/5a1a58b68a2a" style="font-weight: bold;" target="_blank">
                                             <div style="display: inline-flex; align-items: center; margin-right: 15px; margin-bottom: 10px;">
-                                                <img src="assets/images/logos/hackerrank.png" height="30px" width="30px" style="display: inline-flex; border-radius: 8px !important; background-color: white; transform: none;" loading="lazy">
+                                                <img src="assets/images/logos/hackerrank.png" height="30px" width="30px" style="display: inline-flex; border-radius: 8px !important; background-color: white; transform: none;">
                                                 <div style="display: inline-flex; margin-left: 12px;">
                                                     <b class="w-title">REST API Technology</b>
                                                 </div>
@@ -1355,7 +1387,7 @@
                                     <div class="col">
                                         <a href="https://www.linkedin.com/in/abhaytri?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BB6M7b1dFT3uN2A9r2uYhMA%3D%3D" target="_blank">
                                             <div style="display: inline-flex; align-items: center; margin-right: 15px; margin-bottom: 10px;">
-                                                <img src="assets/images/logos/linkedin.png" height="40px" width="40px" style="display: inline-flex; border-radius: 8px !important; transform: none;" loading="lazy">
+                                                <img src="assets/images/logos/linkedin.png" height="40px" width="40px" style="display: inline-flex; border-radius: 8px !important; transform: none;">
                                                 <div style="display: inline-flex; margin-left: 12px;">
                                                     <b class="w-title">@AbhayTri</b>
                                                 </div>
@@ -1373,7 +1405,7 @@
                                     <div class="col">
                                         <a href="https://twitter.com/abhaytriipathi" target="_blank">
                                             <div style="display: inline-flex; align-items: center; margin-right: 15px; margin-bottom: 10px;">
-                                                <img src="assets/images/logos/twitter.webp" height="40px" width="40px" style="display: inline-flex; border-radius: 50% !important; background-color: white; transform: none; padding: 2px;" loading="lazy">
+                                                <img src="assets/images/logos/twitter.webp" height="40px" width="40px" style="display: inline-flex; border-radius: 50% !important; background-color: white; transform: none; padding: 2px;">
                                                 <div style="display: inline-flex; margin-left: 12px;">
                                                     <b class="w-title">@abhaytriipathi</b>
                                                 </div>
@@ -1391,7 +1423,7 @@
                                     <div class="col">
                                         <a href="https://facebook.com/abhaytripathii" target="_blank">
                                             <div style="display: inline-flex; align-items: center; margin-right: 15px; margin-bottom: 10px;">
-                                                <img src="assets/images/logos/facebook.png" height="40px" width="40px" style="display: inline-flex; border-radius: 50% !important; transform: none;" loading="lazy">
+                                                <img src="assets/images/logos/facebook.png" height="40px" width="40px" style="display: inline-flex; border-radius: 50% !important; transform: none;">
                                                 <div style="display: inline-flex; margin-left: 12px;">
                                                     <b class="w-title">@abhaytripathii</b>
                                                 </div>
@@ -1409,7 +1441,7 @@
                                     <div class="col">
                                         <a href="https://github.com/AbhayTr" target="_blank">
                                             <div style="display: inline-flex; align-items: center; margin-right: 15px; margin-bottom: 10px;">
-                                                <img src="assets/images/logos/github.png" height="40px" width="40px" style="display: inline-flex; border-radius: 50% !important; transform: none;" loading="lazy">
+                                                <img src="assets/images/logos/github.png" height="40px" width="40px" style="display: inline-flex; border-radius: 50% !important; transform: none;">
                                                 <div style="display: inline-flex; margin-left: 12px;">
                                                     <b class="w-title">@AbhayTr</b>
                                                 </div>
@@ -1427,7 +1459,7 @@
                                     <div class="col">
                                         <a href="https://www.hackerrank.com/abhaytr" target="_blank">
                                             <div style="display: inline-flex; align-items: center; margin-right: 15px; margin-bottom: 10px;">
-                                                <img src="assets/images/logos/hackerrank.png" height="40px" width="40px" style="display: inline-flex; border-radius: 8px !important; background-color: white; transform: none;" loading="lazy">
+                                                <img src="assets/images/logos/hackerrank.png" height="40px" width="40px" style="display: inline-flex; border-radius: 8px !important; background-color: white; transform: none;">
                                                 <div style="display: inline-flex; margin-left: 12px;">
                                                     <b class="w-title">@AbhayTr</b>
                                                 </div>
@@ -1445,7 +1477,7 @@
                                     <div class="col">
                                         <a href="mailto:abhay-tripathi@live.com" target="_blank">
                                             <div style="display: inline-flex; align-items: center; margin-right: 15px; margin-bottom: 10px;">
-                                                <img src="assets/images/logos/mail.png" height="40px" width="40px" style="display: inline-flex; border-radius: 8px !important; transform: none;" loading="lazy">
+                                                <img src="assets/images/logos/mail.png" height="40px" width="40px" style="display: inline-flex; border-radius: 8px !important; transform: none;">
                                                 <div style="display: inline-flex; margin-left: 12px;">
                                                     <b class="w-title">abhay-tripathi@live.com</b>
                                                 </div>
@@ -1463,7 +1495,7 @@
                                     <div class="col">
                                         <a href="tel: +91 8800958568" target="_blank">
                                             <div style="display: inline-flex; align-items: center; margin-right: 15px; margin-bottom: 10px;">
-                                                <img src="assets/images/logos/phone.png" height="40px" width="40px" style="display: inline-flex; border-radius: 8px !important; transform: none;" loading="lazy">
+                                                <img src="assets/images/logos/phone.png" height="40px" width="40px" style="display: inline-flex; border-radius: 8px !important; transform: none;">
                                                 <div style="display: inline-flex; margin-left: 12px;">
                                                     <b class="w-title">+91-8800958568</b>
                                                 </div>
@@ -1481,7 +1513,7 @@
                                     <div class="col">
                                         <a href="https://t.me/abhayt" target="_blank">
                                             <div style="display: inline-flex; align-items: center; margin-right: 15px; margin-bottom: 10px;">
-                                                <img src="assets/images/logos/telegram.webp" height="40px" width="40px" style="display: inline-flex; border-radius: 50% !important; transform: none;" loading="lazy">
+                                                <img src="assets/images/logos/telegram.webp" height="40px" width="40px" style="display: inline-flex; border-radius: 50% !important; transform: none;">
                                                 <div style="display: inline-flex; margin-left: 12px;">
                                                     <b class="w-title">@AbhayT</b>
                                                 </div>
@@ -1499,7 +1531,7 @@
                                     <div class="col">
                                         <a href="https://wa.me/918800958568" target="_blank">
                                             <div style="display: inline-flex; align-items: center; margin-right: 15px; margin-bottom: 10px;">
-                                                <img src="assets/images/logos/whatsapp.webp" height="40px" width="40px" style="display: inline-flex; border-radius: 8px !important; transform: none;" loading="lazy">
+                                                <img src="assets/images/logos/whatsapp.webp" height="40px" width="40px" style="display: inline-flex; border-radius: 8px !important; transform: none;">
                                                 <div style="display: inline-flex; margin-left: 12px;">
                                                     <b class="w-title">+91-8800958568</b>
                                                 </div>
@@ -1528,6 +1560,8 @@
             var speed = 90;
             var ctxt = "";
             var animCount = 0;
+            var homev = false;
+            var subheadingv = false;
             var aboutmev = false;
             var tsv = false;
             var tsuv = false;
@@ -1714,12 +1748,14 @@
                 $(".navbar-collapse").collapse("hide");
             });
 
-            function completeUI()
+            function homeAnimation()
             {
-                document.getElementById("bgVideo").load();
-                document.getElementById("bgVideo").play();
-                document.getElementById("menuLoader").remove();
-                document.getElementById("menuList").style.display = "flex";
+                if (!homev)
+                {
+                    homev = true;
+                    document.getElementById("title").style.visibility = "visible";
+                    reAnimate("title");
+                }
             }
 
             function typeWriter()
@@ -1734,29 +1770,35 @@
                 else if (i == txt.length)
                 {
                     document.getElementById("scroll_down").style.visibility = "visible";
-                    document.getElementById("scroll_down").style.animation = "none";
-                    document.getElementById("scroll_down").offsetHeight;
-                    document.getElementById("scroll_down").style.animation = null;
+                    reAnimate("scroll_down");
+                    subheadingv = true;
                 }
             }
 
             document.getElementById("title").addEventListener("animationend", function()
             {
-                typeWriter();
+                if (homev)
+                {
+                    typeWriter();
+                }
             }, false);
 
             document.getElementById("scroll_down").addEventListener("animationend", function()
             {
-                if (animCount == 1)
+                if (homev & subheadingv)
                 {
                     document.getElementById("scroll_down").className = "scrollI";
                     document.getElementById("scroll_down").style.animation = "blinker 1.2s linear infinite";
                 }
-                else
-                {
-                    animCount++;
-                }
             }, false);
+
+            function completeUI()
+            {
+                document.getElementById("menuLoader").remove();
+                document.getElementById("menuList").style.display = "flex";
+                document.getElementById("pageLoader").remove();
+                homeAnimation();
+            }
 
             function aboutMeAnimationStart()
             {
