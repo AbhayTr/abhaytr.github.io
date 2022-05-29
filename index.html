@@ -450,6 +450,11 @@
                 margin-bottom: 1rem;
             }
 
+            .loader-menu
+            {
+                margin-top: 0px;
+            }
+
             @media screen and (max-width: 800px) 
             {
 
@@ -527,11 +532,16 @@
                     background: transparent;
                 }
 
+                .loader-menu
+                {
+                    margin-top: 10px;
+                }
+
             }
 
         </style>
     </head>
-    <body onload="playBG();">
+    <body onload="completeUI();">
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -543,7 +553,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarToggler">
-                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0" id="menuList" style="display: none;">
                     <li class="nav-item active" id="hsl">
                         <a class="nav-link" href="#home_section">
                             <b style="font-size: 20px;">Home</b>
@@ -575,6 +585,12 @@
                         </a>
                     </li>
                 </ul>
+                <div class="d-flex loader-menu" style="align-items: center;" id="menuLoader">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="sr-only">Loading...</span>
+                    </div>
+                    &nbsp;&nbsp;<b style="font-size: 1.2em;">Loading Menu...</b>
+                </div>
             </div>
         </nav>
         <div class="main_body" id="mbody">
@@ -1698,10 +1714,12 @@
                 $(".navbar-collapse").collapse("hide");
             });
 
-            function playBG()
+            function completeUI()
             {
                 document.getElementById("bgVideo").load();
                 document.getElementById("bgVideo").play();
+                document.getElementById("menuLoader").remove();
+                document.getElementById("menuList").style.display = "flex";
             }
 
             function typeWriter()
