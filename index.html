@@ -579,7 +579,7 @@
         </nav>
         <div class="main_body" id="mbody">
             <section id="home_section" style="height: 100%; background-color: rgba(0, 0, 0, 0.82);">
-                <video autoplay muted loop class="bg_video" poster="assets/images/bg.png">
+                <video muted loop class="bg_video" poster="assets/images/bg.png" preload="none" id="bgVideo">
                     <source src="assets/videos/home_bg.mp4" type="video/mp4">
                 </video>
                 <div class="d-flex align-items-center justify-content-center" style="height: 90%; width: 100%; text-align: center;">
@@ -1696,7 +1696,10 @@
 
             $(".nav-item").on("click", function(e){
                 $(".navbar-collapse").collapse("hide");
-            })
+            });
+
+            document.getElementById("bgVideo").load();
+            document.getElementById("bgVideo").play();
 
             function typeWriter()
             {
