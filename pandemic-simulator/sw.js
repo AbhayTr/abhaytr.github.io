@@ -1,4 +1,4 @@
-const staticCacheName = 'site-static-v1.2';
+const staticCacheName = 'site-static-v1.3';
 
 const assets = [
     'assets/images/germlogo.png',
@@ -13,7 +13,7 @@ const assets = [
     'splashscreens/iphoneplus_splash.png',
     'splashscreens/iphonex_splash.png',
     '/assets/css/font-awesome.min.css',
-    '/assets/images/universe.jpg'
+    'assets/images/universe.jpg'
 ];
 
 self.addEventListener('fetch', evt => {
