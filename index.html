@@ -574,6 +574,8 @@
                     <div class="spinner-border text-primary" role="status" style="height: 4rem; width: 4rem; font-size: 1.8rem;">
                         <span class="sr-only">Loading...</span>
                     </div>
+                    <br><br><br>
+                    <p id="slowBox" style="display: none;">It's taking a little longer than usual due to slow internet connection. Please wait.</p>
                 </div>
             </div>
         </div>
@@ -1662,6 +1664,14 @@
             var gamesv = false;
             var achievementsv = false;
             var contactv = false;
+
+            setTimeout(function()
+            {
+                if (document.getElementById("slowBox") != null)
+                {
+                    document.getElementById("slowBox").style.display = "block";
+                }
+            }, 10000);
 
             function buildThresholdList()
             {
