@@ -627,7 +627,7 @@
         </nav>
         <div class="main_body" id="mbody">
             <section id="home_section" style="height: 100%; background-color: rgba(0, 0, 0, 0.82);">
-                <video autoplay muted loop class="bg_video" poster="assets/images/bg.png">
+                <video autoplay muted loop class="bg_video" poster="assets/images/bg.png" id="bgVid" preload="none">
                     <source src="assets/videos/home_bg.mp4" type="video/mp4">
                 </video>
                 <div class="d-flex align-items-center justify-content-center" style="height: 90%; width: 100%; text-align: center;">
@@ -1889,6 +1889,8 @@
                 document.getElementById("menuList").style.display = "flex";
                 document.getElementById("pageLoader").remove();
                 homeAnimation();
+                document.getElementById("bgVid").load();
+                document.getElementById("bgVid").play();
             }
 
             document.getElementById("psii").addEventListener("load", function(){
