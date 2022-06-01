@@ -105,7 +105,6 @@
 
             .main_body
             {
-                height: 87%;
                 padding: 0px;
                 margin: 0px;
                 width: 100%;
@@ -1664,6 +1663,7 @@
             var gamesv = false;
             var achievementsv = false;
             var contactv = false;
+            const pagePercentage = 0.20;
 
             setTimeout(function()
             {
@@ -1692,7 +1692,142 @@
                 document.getElementById(elem_id).offsetHeight;
                 document.getElementById(elem_id).style.animation = null;
             }
+
+            function setCurrentSection()
+            {
+                var totalHeight = parseInt(document.getElementById("mbody").scrollHeight) + 1;
+                var currentPos = parseInt(document.getElementById("mbody").scrollTop) + 1;
+                var screenHeight = document.body.clientHeight;
+                var navbarHeight = document.getElementById("navbar").clientHeight;
+                var mBodyHeight = screenHeight - navbarHeight;
+                var heightLimit = totalHeight - mBodyHeight;
+                var remainingScreenHeight = parseInt(mBodyHeight * (1 - pagePercentage));
+                var homeLoadHeight = 0;
+                var homeSectionHeight = document.getElementById("home_section").scrollHeight;
+                var aboutLoadHeight = homeSectionHeight - remainingScreenHeight;
+                var aboutSectionHeight = document.getElementById("about_section").scrollHeight + homeSectionHeight;
+                var skillsLoadHeight = aboutSectionHeight - remainingScreenHeight;
+                var skillsSectionHeight = document.getElementById("skills_section").scrollHeight + aboutSectionHeight;
+                var projectsLoadHeight = skillsSectionHeight - remainingScreenHeight;
+                var projectsSectionHeight = document.getElementById("projects_section").scrollHeight + skillsSectionHeight;
+                var achievementsLoadHeight = projectsSectionHeight - remainingScreenHeight;
+                var achievementsSectionHeight = document.getElementById("achievements_section").scrollHeight + projectsSectionHeight;
+                var contactLoadHeight = achievementsSectionHeight - remainingScreenHeight;
+                var contactSectionHeight = document.getElementById("contact_section").scrollHeight + achievementsSectionHeight;
+                if (currentPos < homeSectionHeight)
+                {
+                    document.getElementById("hsl").className = "nav-item active";
+                    document.getElementById("asl").className = "nav-item";
+                    document.getElementById("ssl").className = "nav-item";
+                    document.getElementById("psl").className = "nav-item";
+                    document.getElementById("acsl").className = "nav-item";
+                    document.getElementById("csl").className = "nav-item";
+                }
+                else if (currentPos >= homeSectionHeight && currentPos < aboutSectionHeight)
+                {
+                    document.getElementById("hsl").className = "nav-item";
+                    document.getElementById("asl").className = "nav-item active";
+                    document.getElementById("ssl").className = "nav-item";
+                    document.getElementById("psl").className = "nav-item";
+                    document.getElementById("acsl").className = "nav-item";
+                    document.getElementById("csl").className = "nav-item";
+                }
+                else if (currentPos >= aboutSectionHeight && currentPos < skillsSectionHeight)
+                {
+                    document.getElementById("hsl").className = "nav-item";
+                    document.getElementById("asl").className = "nav-item";
+                    document.getElementById("ssl").className = "nav-item active";
+                    document.getElementById("psl").className = "nav-item";
+                    document.getElementById("acsl").className = "nav-item";
+                    document.getElementById("csl").className = "nav-item";
+                }
+                else if (currentPos >= skillsSectionHeight && currentPos < projectsSectionHeight)
+                {
+                    document.getElementById("hsl").className = "nav-item";
+                    document.getElementById("asl").className = "nav-item";
+                    document.getElementById("ssl").className = "nav-item";
+                    document.getElementById("psl").className = "nav-item active";
+                    document.getElementById("acsl").className = "nav-item";
+                    document.getElementById("csl").className = "nav-item";
+                }
+                else if (currentPos >= projectsSectionHeight && currentPos < achievementsSectionHeight)
+                {
+                    document.getElementById("hsl").className = "nav-item";
+                    document.getElementById("asl").className = "nav-item";
+                    document.getElementById("ssl").className = "nav-item";
+                    document.getElementById("psl").className = "nav-item";
+                    document.getElementById("acsl").className = "nav-item active";
+                    document.getElementById("csl").className = "nav-item";
+                }
+                else if (currentPos >= achievementsSectionHeight && currentPos < contactSectionHeight)
+                {
+                    document.getElementById("hsl").className = "nav-item";
+                    document.getElementById("asl").className = "nav-item";
+                    document.getElementById("ssl").className = "nav-item";
+                    document.getElementById("psl").className = "nav-item";
+                    document.getElementById("acsl").className = "nav-item";
+                    document.getElementById("csl").className = "nav-item active";
+                }
+                if (currentPos >= (heightLimit - 1))
+                {
+                    document.getElementById("hsl").className = "nav-item";
+                    document.getElementById("asl").className = "nav-item";
+                    document.getElementById("ssl").className = "nav-item";
+                    document.getElementById("psl").className = "nav-item";
+                    document.getElementById("acsl").className = "nav-item";
+                    document.getElementById("csl").className = "nav-item active";
+                }
+                if (currentPos >= aboutLoadHeight && currentPos < skillsLoadHeight)
+                {
+                    if (!aboutmev)
+                    {
+                        aboutmev = true;
+                        aboutMeAnimationStart();
+                    }
+                }
+                else if (currentPos >= skillsLoadHeight && currentPos < projectsLoadHeight)
+                {
+                    if (!tsv)
+                    {
+                        tsv = true;
+                        techincalAnimationStart();
+                    }
+                }
+                else if (currentPos >= projectsLoadHeight && currentPos < achievementsLoadHeight)
+                {
+                    if (!pv)
+                    {
+                        pv = true;
+                        projectsAnimationStart();
+                    }
+                }
+                else if (currentPos >= achievementsLoadHeight && currentPos < contactLoadHeight)
+                {
+                    if (!achievementsv)
+                    {
+                        achievementsv = true;
+                        achievementsAnimationStart();
+                    }
+                }
+                else if (currentPos >= contactLoadHeight)
+                {
+                    if (!contactv)
+                    {
+                        contactv = true;
+                        contactAnimationStart();
+                    }
+                }
+            }
+
+            $("#mbody").scroll(function(){
+                setCurrentSection();
+                clearTimeout($.data(this, "scrollTimer"));
+                $.data(this, "scrollTimer", setTimeout(function(){
+                    setCurrentSection();
+                }, 100));
+            });
             
+            /*
             let observer = new IntersectionObserver(function(entries, observer){
                 entries.forEach(entry => {
                     var labelId = entry.target.id;
@@ -1788,6 +1923,7 @@
                     {
                         if (labelId == "projects_section")
                         {
+                            /*
                             document.getElementById("hsl").className = "nav-item";
                             document.getElementById("asl").className = "nav-item";
                             document.getElementById("ssl").className = "nav-item";
@@ -1802,6 +1938,7 @@
                         }
                         else if (labelId == "achievements_section")
                         {
+                            /*
                             document.getElementById("hsl").className = "nav-item";
                             document.getElementById("asl").className = "nav-item";
                             document.getElementById("ssl").className = "nav-item";
@@ -1825,6 +1962,7 @@
 
             vlobserver.observe(document.getElementById("projects_section"));
             vlobserver.observe(document.getElementById("achievements_section"));
+            */
 
             function resizeBody()
             {
