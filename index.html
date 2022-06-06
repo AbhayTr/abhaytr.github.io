@@ -10,6 +10,7 @@
         <meta name="theme-color" content="#ffffff">
         <title>Abhay Tripathi</title>
         <link rel="canonical" href="https://abhaytr.github.io"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta property="og:title" content="Hello, I am Abhay Tripathi, A Software Engineer, App Developer, Web Developer and a Technology Enthusiast."/>
         <meta name="twitter:title" content="Hello, I am Abhay Tripathi, A Software Engineer, App Developer, Web Developer and a Technology Enthusiast."/>
         <meta name="Description" CONTENT="Hello, I am Abhay Tripathi, A Software Engineer, App Developer, Web Developer and a Technology Enthusiast.">
@@ -562,6 +563,7 @@
     </head>
     <body onload="completeUI();">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <div id="pageLoader">
@@ -579,7 +581,7 @@
             </div>
         </div>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar">
-            <a class="navbar-brand" href="#home_section">
+            <a class="navbar-brand js-scroll" href="#home_section">
                 <img class="logo" src="assets/images/profile.png">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
@@ -588,32 +590,32 @@
             <div class="collapse navbar-collapse" id="navbarToggler">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0" id="menuList" style="display: none;">
                     <li class="nav-item active" id="hsl">
-                        <a class="nav-link" href="#home_section">
+                        <a class="nav-link js-scroll" href="#home_section">
                             <b style="font-size: 20px;">Home</b>
                         </a>
                     </li>
                     <li class="nav-item" id="asl">
-                        <a class="nav-link" href="#about_section">
+                        <a class="nav-link js-scroll" href="#about_section">
                             <b style="font-size: 20px;">About Me</b>
                         </a>
                     </li>
                     <li class="nav-item" id="ssl">
-                        <a class="nav-link" href="#skills_section">
+                        <a class="nav-link js-scroll" href="#skills_section">
                             <b style="font-size: 20px;">Technical Skills</b>
                         </a>
                     </li>
                     <li class="nav-item" id="psl">
-                        <a class="nav-link" href="#projects_section">
+                        <a class="nav-link js-scroll" href="#projects_section">
                             <b style="font-size: 20px;">Projects</b>
                         </a>
                     </li>
                     <li class="nav-item" id="acsl">
-                        <a class="nav-link" href="#achievements_section">
+                        <a class="nav-link js-scroll" href="#achievements_section">
                             <b style="font-size: 20px;">Achievements</b>
                         </a>
                     </li>
                     <li class="nav-item" id="csl">
-                        <a class="nav-link" href="#contact_section">
+                        <a class="nav-link js-scroll" href="#contact_section">
                             <b style="font-size: 20px;">Contact Me</b>
                         </a>
                     </li>
@@ -1664,6 +1666,31 @@
             var achievementsv = false;
             var contactv = false;
             const pagePercentage = 0.20;
+            var totalHeight = 0;
+            var currentPos = 0;
+            var screenHeight = 0;
+            var navbarHeight = 0;
+            var mBodyHeight = 0;
+            var heightLimit = 0;
+            var remainingScreenHeight = 0;
+            var homeLoadHeight = 0;
+            var homeSectionHeight = 0;
+            var homeHeight = 0;
+            var aboutLoadHeight = 0;
+            var aboutSectionHeight = 0;
+            var aboutHeight = 0;
+            var skillsLoadHeight = 0;
+            var skillsSectionHeight = 0;
+            var skillsHeight = 0;
+            var projectsLoadHeight = 0;
+            var projectsSectionHeight = 0;
+            var projectsHeight = 0;
+            var achievementsLoadHeight = 0;
+            var achievementsSectionHeight = 0;
+            var achievementsHeight = 0;
+            var contactLoadHeight = 0;
+            var contactSectionHeight = 0;
+            var contactHeight = 0;
 
             setTimeout(function()
             {
@@ -1695,25 +1722,31 @@
 
             function setCurrentSection()
             {
-                var totalHeight = parseInt(document.getElementById("mbody").scrollHeight) + 1;
-                var currentPos = parseInt(document.getElementById("mbody").scrollTop) + 1;
-                var screenHeight = document.body.clientHeight;
-                var navbarHeight = document.getElementById("navbar").clientHeight;
-                var mBodyHeight = screenHeight - navbarHeight;
-                var heightLimit = totalHeight - mBodyHeight;
-                var remainingScreenHeight = parseInt(mBodyHeight * (1 - pagePercentage));
-                var homeLoadHeight = 0;
-                var homeSectionHeight = document.getElementById("home_section").scrollHeight;
-                var aboutLoadHeight = homeSectionHeight - remainingScreenHeight;
-                var aboutSectionHeight = document.getElementById("about_section").scrollHeight + homeSectionHeight;
-                var skillsLoadHeight = aboutSectionHeight - remainingScreenHeight;
-                var skillsSectionHeight = document.getElementById("skills_section").scrollHeight + aboutSectionHeight;
-                var projectsLoadHeight = skillsSectionHeight - remainingScreenHeight;
-                var projectsSectionHeight = document.getElementById("projects_section").scrollHeight + skillsSectionHeight;
-                var achievementsLoadHeight = projectsSectionHeight - remainingScreenHeight;
-                var achievementsSectionHeight = document.getElementById("achievements_section").scrollHeight + projectsSectionHeight;
-                var contactLoadHeight = achievementsSectionHeight - remainingScreenHeight;
-                var contactSectionHeight = document.getElementById("contact_section").scrollHeight + achievementsSectionHeight;
+                totalHeight = parseInt(document.getElementById("mbody").scrollHeight) + 1;
+                currentPos = parseInt(document.getElementById("mbody").scrollTop) + 1;
+                screenHeight = document.body.clientHeight;
+                navbarHeight = document.getElementById("navbar").clientHeight;
+                mBodyHeight = screenHeight - navbarHeight;
+                heightLimit = totalHeight - mBodyHeight;
+                remainingScreenHeight = parseInt(mBodyHeight * (1 - pagePercentage));
+                homeLoadHeight = 0;
+                homeSectionHeight = document.getElementById("home_section").scrollHeight;
+                homeHeight = 0;
+                aboutLoadHeight = homeSectionHeight - remainingScreenHeight;
+                aboutSectionHeight = document.getElementById("about_section").scrollHeight + homeSectionHeight;
+                aboutHeight = homeHeight + document.getElementById("home_section").scrollHeight;
+                skillsLoadHeight = aboutSectionHeight - remainingScreenHeight;
+                skillsSectionHeight = document.getElementById("skills_section").scrollHeight + aboutSectionHeight;
+                skillsHeight = aboutHeight + document.getElementById("about_section").scrollHeight;
+                projectsLoadHeight = skillsSectionHeight - remainingScreenHeight;
+                projectsSectionHeight = document.getElementById("projects_section").scrollHeight + skillsSectionHeight;
+                projectsHeight = skillsHeight + document.getElementById("skills_section").scrollHeight;
+                achievementsLoadHeight = projectsSectionHeight - remainingScreenHeight;
+                achievementsSectionHeight = document.getElementById("achievements_section").scrollHeight + projectsSectionHeight;
+                achievementsHeight = projectsHeight + document.getElementById("projects_section").scrollHeight;
+                contactLoadHeight = achievementsSectionHeight - remainingScreenHeight;
+                contactSectionHeight = document.getElementById("contact_section").scrollHeight + achievementsSectionHeight;
+                contactHeight = achievementsHeight + document.getElementById("achievements_section").scrollHeight;
                 if (currentPos < homeSectionHeight)
                 {
                     document.getElementById("hsl").className = "nav-item active";
@@ -1827,28 +1860,33 @@
                 }, 100));
             });
 
+            $("a.js-scroll[href*='#']:not([href='#'])").on("click", function(){
+                if (location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") && location.hostname == this.hostname)
+                {
+                    var goToSection = this.hash.slice(1);
+                    $(".navbar-collapse").collapse("hide");
+                    document.getElementById(goToSection).scrollIntoView(true);
+                    return false;
+                }
+            });
+            
+            if (window.location.hash)
+            {
+                var goToSection = window.location.hash.replace("#", "");
+                document.getElementById(goToSection).scrollIntoView(true);
+            }
+
             function resizeBody()
             {
                 var bodyHeight = document.body.clientHeight;
                 var navHeight = document.getElementById("navbar").clientHeight;
                 var mbodyHeight = bodyHeight - navHeight;
                 document.getElementById("mbody").style.height = mbodyHeight + "px";
+                setCurrentSection();
             }
             
             resizeBody();
             window.onresize = resizeBody;
-
-            function removeHash()
-            {
-                history.pushState(null, null, window.location.href.split("#")[0]);
-            }
-            
-            removeHash();
-            window.addEventListener("hashchange", removeHash, false);
-
-            $(".nav-item").on("click", function(e){
-                $(".navbar-collapse").collapse("hide");
-            });
 
             function homeAnimation()
             {
@@ -1902,6 +1940,7 @@
                 homeAnimation();
                 document.getElementById("bgVid").load();
                 document.getElementById("bgVid").play();
+                setCurrentSection();
             }
 
             document.getElementById("psii").addEventListener("load", function(){
