@@ -1944,7 +1944,7 @@ This is the portfolio website for Mr. Abhay Tripathi which he has developed hims
         </div>
         <script>
 
-            var i = 0;
+            var iCtr = 0;
             const txt = "A passionate learner.";
             var speed = 90;
             var ctxt = "";
@@ -2229,14 +2229,14 @@ This is the portfolio website for Mr. Abhay Tripathi which he has developed hims
 
             function typeWriter()
             {
-                if (i < txt.length)
+                if (iCtr < txt.length)
                 {
-                    ctxt += txt.charAt(i);
+                    ctxt += txt.charAt(iCtr);
                     document.getElementById("sub_heading").innerHTML = ctxt;
-                    i++;
+                    iCtr++;
                     setTimeout(typeWriter, speed);
                 }
-                else if (i == txt.length)
+                else if (iCtr == txt.length)
                 {
                     document.getElementById("scroll_down").style.visibility = "visible";
                     reAnimate("scroll_down");
